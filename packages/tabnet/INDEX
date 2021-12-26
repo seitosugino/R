@@ -1,0 +1,10 @@
+autoplot.tabnet_explain
+                        Plot tabnet_explain mask importance heatmap
+autoplot.tabnet_fit     Plot tabnet_fit model loss along epochs
+decision_width          Parameters for the tabnet model
+resolve_data            Transforms input data into tensors
+tabnet                  Parsnip compatible tabnet model
+tabnet_config           Configuration for TabNet models
+tabnet_explain          Interpretation metrics from a TabNet model
+tabnet_fit              Tabnet model
+tabnet_pretrain         Tabnet model

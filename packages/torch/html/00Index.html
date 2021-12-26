@@ -1,0 +1,1484 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>R: Tensors and Neural Networks with 'GPU' Acceleration</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+<h1> Tensors and Neural Networks with 'GPU' Acceleration
+<img class="toplogo" src="../../../doc/html/Rlogo.svg" alt="[R logo]" />
+</h1>
+<hr/>
+<div style="text-align: center;">
+<a href="../../../doc/html/packages.html"><img class="arrow" src="../../../doc/html/left.jpg" alt="[Up]" /></a>
+<a href="../../../doc/html/index.html"><img class="arrow" src="../../../doc/html/up.jpg" alt="[Top]" /></a>
+</div><h2>Documentation for package &lsquo;torch&rsquo; version 0.6.0</h2>
+
+<ul><li><a href="../DESCRIPTION">DESCRIPTION file</a>.</li>
+<li><a href="../doc/index.html">User guides, package vignettes and other documentation.</a></li>
+</ul>
+
+<h2>Help Pages</h2>
+
+
+<p style="text-align: center;">
+<a href="#A">A</a>
+<a href="#B">B</a>
+<a href="#C">C</a>
+<a href="#D">D</a>
+<a href="#E">E</a>
+<a href="#G">G</a>
+<a href="#I">I</a>
+<a href="#J">J</a>
+<a href="#L">L</a>
+<a href="#N">N</a>
+<a href="#O">O</a>
+<a href="#S">S</a>
+<a href="#T">T</a>
+<a href="#W">W</a>
+</p>
+
+
+<h2><a name="A">-- A --</a></h2>
+
+<table width="100%">
+<tr><td style="width: 25%;"><a href="as_array.html">as_array</a></td>
+<td>Converts to array</td></tr>
+<tr><td style="width: 25%;"><a href="AutogradContext.html">AutogradContext</a></td>
+<td>Class representing the context.</td></tr>
+<tr><td style="width: 25%;"><a href="autograd_backward.html">autograd_backward</a></td>
+<td>Computes the sum of gradients of given tensors w.r.t. graph leaves.</td></tr>
+<tr><td style="width: 25%;"><a href="autograd_function.html">autograd_function</a></td>
+<td>Records operation history and defines formulas for differentiating ops.</td></tr>
+<tr><td style="width: 25%;"><a href="autograd_grad.html">autograd_grad</a></td>
+<td>Computes and returns the sum of gradients of outputs w.r.t. the inputs.</td></tr>
+<tr><td style="width: 25%;"><a href="autograd_set_grad_mode.html">autograd_set_grad_mode</a></td>
+<td>Set grad mode</td></tr>
+</table>
+
+<h2><a name="B">-- B --</a></h2>
+
+<table width="100%">
+<tr><td style="width: 25%;"><a href="backends_mkldnn_is_available.html">backends_mkldnn_is_available</a></td>
+<td>MKLDNN is available</td></tr>
+<tr><td style="width: 25%;"><a href="backends_mkl_is_available.html">backends_mkl_is_available</a></td>
+<td>MKL is available</td></tr>
+<tr><td style="width: 25%;"><a href="backends_openmp_is_available.html">backends_openmp_is_available</a></td>
+<td>OpenMP is available</td></tr>
+<tr><td style="width: 25%;"><a href="broadcast_all.html">broadcast_all</a></td>
+<td>Given a list of values (possibly containing numbers), returns a list where each value is broadcasted based on the following rules:</td></tr>
+</table>
+
+<h2><a name="C">-- C --</a></h2>
+
+<table width="100%">
+<tr><td style="width: 25%;"><a href="Constraint.html">Constraint</a></td>
+<td>Abstract base class for constraints.</td></tr>
+<tr><td style="width: 25%;"><a href="contrib_sort_vertices.html">contrib_sort_vertices</a></td>
+<td>Contrib sort vertices</td></tr>
+<tr><td style="width: 25%;"><a href="cuda_current_device.html">cuda_current_device</a></td>
+<td>Returns the index of a currently selected device.</td></tr>
+<tr><td style="width: 25%;"><a href="cuda_device_count.html">cuda_device_count</a></td>
+<td>Returns the number of GPUs available.</td></tr>
+<tr><td style="width: 25%;"><a href="cuda_is_available.html">cuda_is_available</a></td>
+<td>Returns a bool indicating if CUDA is currently available.</td></tr>
+</table>
+
+<h2><a name="D">-- D --</a></h2>
+
+<table width="100%">
+<tr><td style="width: 25%;"><a href="dataloader.html">dataloader</a></td>
+<td>Data loader. Combines a dataset and a sampler, and provides single- or multi-process iterators over the dataset.</td></tr>
+<tr><td style="width: 25%;"><a href="dataloader_make_iter.html">dataloader_make_iter</a></td>
+<td>Creates an iterator from a DataLoader</td></tr>
+<tr><td style="width: 25%;"><a href="dataloader_next.html">dataloader_next</a></td>
+<td>Get the next element of a dataloader iterator</td></tr>
+<tr><td style="width: 25%;"><a href="dataset.html">dataset</a></td>
+<td>Helper function to create an R6 class that inherits from the abstract 'Dataset' class</td></tr>
+<tr><td style="width: 25%;"><a href="dataset_subset.html">dataset_subset</a></td>
+<td>Dataset Subset</td></tr>
+<tr><td style="width: 25%;"><a href="Distribution.html">Distribution</a></td>
+<td>Generic R6 class representing distributions</td></tr>
+<tr><td style="width: 25%;"><a href="distr_bernoulli.html">distr_bernoulli</a></td>
+<td>Creates a Bernoulli distribution parameterized by 'probs' or 'logits' (but not both). Samples are binary (0 or 1). They take the value '1' with probability 'p' and '0' with probability '1 - p'.</td></tr>
+<tr><td style="width: 25%;"><a href="distr_categorical.html">distr_categorical</a></td>
+<td>Creates a categorical distribution parameterized by either 'probs' or 'logits' (but not both).</td></tr>
+<tr><td style="width: 25%;"><a href="distr_chi2.html">distr_chi2</a></td>
+<td>Creates a Chi2 distribution parameterized by shape parameter 'df'. This is exactly equivalent to 'distr_gamma(alpha=0.5*df, beta=0.5)'</td></tr>
+<tr><td style="width: 25%;"><a href="distr_gamma.html">distr_gamma</a></td>
+<td>Creates a Gamma distribution parameterized by shape 'concentration' and 'rate'.</td></tr>
+<tr><td style="width: 25%;"><a href="distr_mixture_same_family.html">distr_mixture_same_family</a></td>
+<td>Mixture of components in the same family</td></tr>
+<tr><td style="width: 25%;"><a href="distr_multivariate_normal.html">distr_multivariate_normal</a></td>
+<td>Gaussian distribution</td></tr>
+<tr><td style="width: 25%;"><a href="distr_normal.html">distr_normal</a></td>
+<td>Creates a normal (also called Gaussian) distribution parameterized by 'loc' and 'scale'.</td></tr>
+<tr><td style="width: 25%;"><a href="distr_poisson.html">distr_poisson</a></td>
+<td>Creates a Poisson distribution parameterized by 'rate', the rate parameter.</td></tr>
+</table>
+
+<h2><a name="E">-- E --</a></h2>
+
+<table width="100%">
+<tr><td style="width: 25%;"><a href="enumerate.html">enumerate</a></td>
+<td>Enumerate an iterator</td></tr>
+<tr><td style="width: 25%;"><a href="enumerate.dataloader.html">enumerate.dataloader</a></td>
+<td>Enumerate an iterator</td></tr>
+</table>
+
+<h2><a name="G">-- G --</a></h2>
+
+<table width="100%">
+<tr><td style="width: 25%;"><a href="get_install_libs_url.html">get_install_libs_url</a></td>
+<td>List of files to download</td></tr>
+</table>
+
+<h2><a name="I">-- I --</a></h2>
+
+<table width="100%">
+<tr><td style="width: 25%;"><a href="install_torch.html">install_torch</a></td>
+<td>Install Torch</td></tr>
+<tr><td style="width: 25%;"><a href="install_torch_from_file.html">install_torch_from_file</a></td>
+<td>Install Torch from files</td></tr>
+<tr><td style="width: 25%;"><a href="is_dataloader.html">is_dataloader</a></td>
+<td>Checks if the object is a dataloader</td></tr>
+<tr><td style="width: 25%;"><a href="is_nn_buffer.html">is_nn_buffer</a></td>
+<td>Checks if the object is a nn_buffer</td></tr>
+<tr><td style="width: 25%;"><a href="is_nn_module.html">is_nn_module</a></td>
+<td>Checks if the object is an nn_module</td></tr>
+<tr><td style="width: 25%;"><a href="is_nn_parameter.html">is_nn_parameter</a></td>
+<td>Checks if an object is a nn_parameter</td></tr>
+<tr><td style="width: 25%;"><a href="is_optimizer.html">is_optimizer</a></td>
+<td>Checks if the object is a torch optimizer</td></tr>
+<tr><td style="width: 25%;"><a href="is_torch_device.html">is_torch_device</a></td>
+<td>Checks if object is a device</td></tr>
+<tr><td style="width: 25%;"><a href="is_torch_dtype.html">is_torch_dtype</a></td>
+<td>Check if object is a torch data type</td></tr>
+<tr><td style="width: 25%;"><a href="is_torch_layout.html">is_torch_layout</a></td>
+<td>Check if an object is a torch layout.</td></tr>
+<tr><td style="width: 25%;"><a href="is_torch_memory_format.html">is_torch_memory_format</a></td>
+<td>Check if an object is a memory format</td></tr>
+<tr><td style="width: 25%;"><a href="is_torch_qscheme.html">is_torch_qscheme</a></td>
+<td>Checks if an object is a QScheme</td></tr>
+<tr><td style="width: 25%;"><a href="is_undefined_tensor.html">is_undefined_tensor</a></td>
+<td>Checks if a tensor is undefined</td></tr>
+</table>
+
+<h2><a name="J">-- J --</a></h2>
+
+<table width="100%">
+<tr><td style="width: 25%;"><a href="jit_compile.html">jit_compile</a></td>
+<td>Compile TorchScript code into a graph</td></tr>
+<tr><td style="width: 25%;"><a href="jit_load.html">jit_load</a></td>
+<td>Loads a 'script_function' or 'script_module' previously saved with 'jit_save'</td></tr>
+<tr><td style="width: 25%;"><a href="jit_save.html">jit_save</a></td>
+<td>Saves a 'script_function' to a path</td></tr>
+<tr><td style="width: 25%;"><a href="jit_scalar.html">jit_scalar</a></td>
+<td>Adds the 'jit_scalar' class to the input</td></tr>
+<tr><td style="width: 25%;"><a href="jit_trace.html">jit_trace</a></td>
+<td>Trace a function and return an executable 'script_function'.</td></tr>
+<tr><td style="width: 25%;"><a href="jit_trace_module.html">jit_trace_module</a></td>
+<td>Trace a module</td></tr>
+<tr><td style="width: 25%;"><a href="jit_tuple.html">jit_tuple</a></td>
+<td>Adds the 'jit_tuple' class to the input</td></tr>
+</table>
+
+<h2><a name="L">-- L --</a></h2>
+
+<table width="100%">
+<tr><td style="width: 25%;"><a href="linalg_cholesky.html">linalg_cholesky</a></td>
+<td>Computes the Cholesky decomposition of a complex Hermitian or real symmetric positive-definite matrix.</td></tr>
+<tr><td style="width: 25%;"><a href="linalg_cholesky_ex.html">linalg_cholesky_ex</a></td>
+<td>Computes the Cholesky decomposition of a complex Hermitian or real symmetric positive-definite matrix.</td></tr>
+<tr><td style="width: 25%;"><a href="linalg_cond.html">linalg_cond</a></td>
+<td>Computes the condition number of a matrix with respect to a matrix norm.</td></tr>
+<tr><td style="width: 25%;"><a href="linalg_det.html">linalg_det</a></td>
+<td>Computes the determinant of a square matrix.</td></tr>
+<tr><td style="width: 25%;"><a href="linalg_eig.html">linalg_eig</a></td>
+<td>Computes the eigenvalue decomposition of a square matrix if it exists.</td></tr>
+<tr><td style="width: 25%;"><a href="linalg_eigh.html">linalg_eigh</a></td>
+<td>Computes the eigenvalue decomposition of a complex Hermitian or real symmetric matrix.</td></tr>
+<tr><td style="width: 25%;"><a href="linalg_eigvals.html">linalg_eigvals</a></td>
+<td>Computes the eigenvalues of a square matrix.</td></tr>
+<tr><td style="width: 25%;"><a href="linalg_eigvalsh.html">linalg_eigvalsh</a></td>
+<td>Computes the eigenvalues of a complex Hermitian or real symmetric matrix.</td></tr>
+<tr><td style="width: 25%;"><a href="linalg_householder_product.html">linalg_householder_product</a></td>
+<td>Computes the first 'n' columns of a product of Householder matrices.</td></tr>
+<tr><td style="width: 25%;"><a href="linalg_inv.html">linalg_inv</a></td>
+<td>Computes the inverse of a square matrix if it exists.</td></tr>
+<tr><td style="width: 25%;"><a href="linalg_inv_ex.html">linalg_inv_ex</a></td>
+<td>Computes the inverse of a square matrix if it is invertible.</td></tr>
+<tr><td style="width: 25%;"><a href="linalg_lstsq.html">linalg_lstsq</a></td>
+<td>Computes a solution to the least squares problem of a system of linear equations.</td></tr>
+<tr><td style="width: 25%;"><a href="linalg_matrix_norm.html">linalg_matrix_norm</a></td>
+<td>Computes a matrix norm.</td></tr>
+<tr><td style="width: 25%;"><a href="linalg_matrix_power.html">linalg_matrix_power</a></td>
+<td>Computes the 'n'-th power of a square matrix for an integer 'n'.</td></tr>
+<tr><td style="width: 25%;"><a href="linalg_matrix_rank.html">linalg_matrix_rank</a></td>
+<td>Computes the numerical rank of a matrix.</td></tr>
+<tr><td style="width: 25%;"><a href="linalg_multi_dot.html">linalg_multi_dot</a></td>
+<td>Efficiently multiplies two or more matrices</td></tr>
+<tr><td style="width: 25%;"><a href="linalg_norm.html">linalg_norm</a></td>
+<td>Computes a vector or matrix norm.</td></tr>
+<tr><td style="width: 25%;"><a href="linalg_pinv.html">linalg_pinv</a></td>
+<td>Computes the pseudoinverse (Moore-Penrose inverse) of a matrix.</td></tr>
+<tr><td style="width: 25%;"><a href="linalg_qr.html">linalg_qr</a></td>
+<td>Computes the QR decomposition of a matrix.</td></tr>
+<tr><td style="width: 25%;"><a href="linalg_slogdet.html">linalg_slogdet</a></td>
+<td>Computes the sign and natural logarithm of the absolute value of the determinant of a square matrix.</td></tr>
+<tr><td style="width: 25%;"><a href="linalg_solve.html">linalg_solve</a></td>
+<td>Computes the solution of a square system of linear equations with a unique solution.</td></tr>
+<tr><td style="width: 25%;"><a href="linalg_svd.html">linalg_svd</a></td>
+<td>Computes the singular value decomposition (SVD) of a matrix.</td></tr>
+<tr><td style="width: 25%;"><a href="linalg_svdvals.html">linalg_svdvals</a></td>
+<td>Computes the singular values of a matrix.</td></tr>
+<tr><td style="width: 25%;"><a href="linalg_tensorinv.html">linalg_tensorinv</a></td>
+<td>Computes the multiplicative inverse of 'torch_tensordot()'</td></tr>
+<tr><td style="width: 25%;"><a href="linalg_tensorsolve.html">linalg_tensorsolve</a></td>
+<td>Computes the solution 'X' to the system 'torch_tensordot(A, X) = B'.</td></tr>
+<tr><td style="width: 25%;"><a href="linalg_vector_norm.html">linalg_vector_norm</a></td>
+<td>Computes a vector norm.</td></tr>
+<tr><td style="width: 25%;"><a href="load_state_dict.html">load_state_dict</a></td>
+<td>Load a state dict file</td></tr>
+<tr><td style="width: 25%;"><a href="lr_lambda.html">lr_lambda</a></td>
+<td>Sets the learning rate of each parameter group to the initial lr times a given function. When last_epoch=-1, sets initial lr as lr.</td></tr>
+<tr><td style="width: 25%;"><a href="lr_multiplicative.html">lr_multiplicative</a></td>
+<td>Multiply the learning rate of each parameter group by the factor given in the specified function. When last_epoch=-1, sets initial lr as lr.</td></tr>
+<tr><td style="width: 25%;"><a href="lr_one_cycle.html">lr_one_cycle</a></td>
+<td>Once cycle learning rate</td></tr>
+<tr><td style="width: 25%;"><a href="lr_scheduler.html">lr_scheduler</a></td>
+<td>Creates learning rate schedulers</td></tr>
+<tr><td style="width: 25%;"><a href="lr_step.html">lr_step</a></td>
+<td>Step learning rate decay</td></tr>
+</table>
+
+<h2><a name="N">-- N --</a></h2>
+
+<table width="100%">
+<tr><td style="width: 25%;"><a href="nnf_adaptive_avg_pool1d.html">nnf_adaptive_avg_pool1d</a></td>
+<td>Adaptive_avg_pool1d</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_adaptive_avg_pool2d.html">nnf_adaptive_avg_pool2d</a></td>
+<td>Adaptive_avg_pool2d</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_adaptive_avg_pool3d.html">nnf_adaptive_avg_pool3d</a></td>
+<td>Adaptive_avg_pool3d</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_adaptive_max_pool1d.html">nnf_adaptive_max_pool1d</a></td>
+<td>Adaptive_max_pool1d</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_adaptive_max_pool2d.html">nnf_adaptive_max_pool2d</a></td>
+<td>Adaptive_max_pool2d</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_adaptive_max_pool3d.html">nnf_adaptive_max_pool3d</a></td>
+<td>Adaptive_max_pool3d</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_affine_grid.html">nnf_affine_grid</a></td>
+<td>Affine_grid</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_alpha_dropout.html">nnf_alpha_dropout</a></td>
+<td>Alpha_dropout</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_avg_pool1d.html">nnf_avg_pool1d</a></td>
+<td>Avg_pool1d</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_avg_pool2d.html">nnf_avg_pool2d</a></td>
+<td>Avg_pool2d</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_avg_pool3d.html">nnf_avg_pool3d</a></td>
+<td>Avg_pool3d</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_batch_norm.html">nnf_batch_norm</a></td>
+<td>Batch_norm</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_bilinear.html">nnf_bilinear</a></td>
+<td>Bilinear</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_binary_cross_entropy.html">nnf_binary_cross_entropy</a></td>
+<td>Binary_cross_entropy</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_binary_cross_entropy_with_logits.html">nnf_binary_cross_entropy_with_logits</a></td>
+<td>Binary_cross_entropy_with_logits</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_celu.html">nnf_celu</a></td>
+<td>Celu</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_celu.html">nnf_celu_</a></td>
+<td>Celu</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_contrib_sparsemax.html">nnf_contrib_sparsemax</a></td>
+<td>Sparsemax</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_conv1d.html">nnf_conv1d</a></td>
+<td>Conv1d</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_conv2d.html">nnf_conv2d</a></td>
+<td>Conv2d</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_conv3d.html">nnf_conv3d</a></td>
+<td>Conv3d</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_conv_tbc.html">nnf_conv_tbc</a></td>
+<td>Conv_tbc</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_conv_transpose1d.html">nnf_conv_transpose1d</a></td>
+<td>Conv_transpose1d</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_conv_transpose2d.html">nnf_conv_transpose2d</a></td>
+<td>Conv_transpose2d</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_conv_transpose3d.html">nnf_conv_transpose3d</a></td>
+<td>Conv_transpose3d</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_cosine_embedding_loss.html">nnf_cosine_embedding_loss</a></td>
+<td>Cosine_embedding_loss</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_cosine_similarity.html">nnf_cosine_similarity</a></td>
+<td>Cosine_similarity</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_cross_entropy.html">nnf_cross_entropy</a></td>
+<td>Cross_entropy</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_ctc_loss.html">nnf_ctc_loss</a></td>
+<td>Ctc_loss</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_dropout.html">nnf_dropout</a></td>
+<td>Dropout</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_dropout2d.html">nnf_dropout2d</a></td>
+<td>Dropout2d</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_dropout3d.html">nnf_dropout3d</a></td>
+<td>Dropout3d</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_elu.html">nnf_elu</a></td>
+<td>Elu</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_elu.html">nnf_elu_</a></td>
+<td>Elu</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_embedding.html">nnf_embedding</a></td>
+<td>Embedding</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_embedding_bag.html">nnf_embedding_bag</a></td>
+<td>Embedding_bag</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_fold.html">nnf_fold</a></td>
+<td>Fold</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_fractional_max_pool2d.html">nnf_fractional_max_pool2d</a></td>
+<td>Fractional_max_pool2d</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_fractional_max_pool3d.html">nnf_fractional_max_pool3d</a></td>
+<td>Fractional_max_pool3d</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_gelu.html">nnf_gelu</a></td>
+<td>Gelu</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_glu.html">nnf_glu</a></td>
+<td>Glu</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_grid_sample.html">nnf_grid_sample</a></td>
+<td>Grid_sample</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_group_norm.html">nnf_group_norm</a></td>
+<td>Group_norm</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_gumbel_softmax.html">nnf_gumbel_softmax</a></td>
+<td>Gumbel_softmax</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_hardshrink.html">nnf_hardshrink</a></td>
+<td>Hardshrink</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_hardsigmoid.html">nnf_hardsigmoid</a></td>
+<td>Hardsigmoid</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_hardswish.html">nnf_hardswish</a></td>
+<td>Hardswish</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_hardtanh.html">nnf_hardtanh</a></td>
+<td>Hardtanh</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_hardtanh.html">nnf_hardtanh_</a></td>
+<td>Hardtanh</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_hinge_embedding_loss.html">nnf_hinge_embedding_loss</a></td>
+<td>Hinge_embedding_loss</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_instance_norm.html">nnf_instance_norm</a></td>
+<td>Instance_norm</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_interpolate.html">nnf_interpolate</a></td>
+<td>Interpolate</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_kl_div.html">nnf_kl_div</a></td>
+<td>Kl_div</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_l1_loss.html">nnf_l1_loss</a></td>
+<td>L1_loss</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_layer_norm.html">nnf_layer_norm</a></td>
+<td>Layer_norm</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_leaky_relu.html">nnf_leaky_relu</a></td>
+<td>Leaky_relu</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_linear.html">nnf_linear</a></td>
+<td>Linear</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_local_response_norm.html">nnf_local_response_norm</a></td>
+<td>Local_response_norm</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_logsigmoid.html">nnf_logsigmoid</a></td>
+<td>Logsigmoid</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_log_softmax.html">nnf_log_softmax</a></td>
+<td>Log_softmax</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_lp_pool1d.html">nnf_lp_pool1d</a></td>
+<td>Lp_pool1d</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_lp_pool2d.html">nnf_lp_pool2d</a></td>
+<td>Lp_pool2d</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_margin_ranking_loss.html">nnf_margin_ranking_loss</a></td>
+<td>Margin_ranking_loss</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_max_pool1d.html">nnf_max_pool1d</a></td>
+<td>Max_pool1d</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_max_pool2d.html">nnf_max_pool2d</a></td>
+<td>Max_pool2d</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_max_pool3d.html">nnf_max_pool3d</a></td>
+<td>Max_pool3d</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_max_unpool1d.html">nnf_max_unpool1d</a></td>
+<td>Max_unpool1d</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_max_unpool2d.html">nnf_max_unpool2d</a></td>
+<td>Max_unpool2d</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_max_unpool3d.html">nnf_max_unpool3d</a></td>
+<td>Max_unpool3d</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_mse_loss.html">nnf_mse_loss</a></td>
+<td>Mse_loss</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_multilabel_margin_loss.html">nnf_multilabel_margin_loss</a></td>
+<td>Multilabel_margin_loss</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_multilabel_soft_margin_loss.html">nnf_multilabel_soft_margin_loss</a></td>
+<td>Multilabel_soft_margin_loss</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_multi_head_attention_forward.html">nnf_multi_head_attention_forward</a></td>
+<td>Multi head attention forward</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_multi_margin_loss.html">nnf_multi_margin_loss</a></td>
+<td>Multi_margin_loss</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_nll_loss.html">nnf_nll_loss</a></td>
+<td>Nll_loss</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_normalize.html">nnf_normalize</a></td>
+<td>Normalize</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_one_hot.html">nnf_one_hot</a></td>
+<td>One_hot</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_pad.html">nnf_pad</a></td>
+<td>Pad</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_pairwise_distance.html">nnf_pairwise_distance</a></td>
+<td>Pairwise_distance</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_pdist.html">nnf_pdist</a></td>
+<td>Pdist</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_pixel_shuffle.html">nnf_pixel_shuffle</a></td>
+<td>Pixel_shuffle</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_poisson_nll_loss.html">nnf_poisson_nll_loss</a></td>
+<td>Poisson_nll_loss</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_prelu.html">nnf_prelu</a></td>
+<td>Prelu</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_relu.html">nnf_relu</a></td>
+<td>Relu</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_relu6.html">nnf_relu6</a></td>
+<td>Relu6</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_relu.html">nnf_relu_</a></td>
+<td>Relu</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_rrelu.html">nnf_rrelu</a></td>
+<td>Rrelu</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_rrelu.html">nnf_rrelu_</a></td>
+<td>Rrelu</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_selu.html">nnf_selu</a></td>
+<td>Selu</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_selu.html">nnf_selu_</a></td>
+<td>Selu</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_sigmoid.html">nnf_sigmoid</a></td>
+<td>Sigmoid</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_smooth_l1_loss.html">nnf_smooth_l1_loss</a></td>
+<td>Smooth_l1_loss</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_softmax.html">nnf_softmax</a></td>
+<td>Softmax</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_softmin.html">nnf_softmin</a></td>
+<td>Softmin</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_softplus.html">nnf_softplus</a></td>
+<td>Softplus</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_softshrink.html">nnf_softshrink</a></td>
+<td>Softshrink</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_softsign.html">nnf_softsign</a></td>
+<td>Softsign</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_soft_margin_loss.html">nnf_soft_margin_loss</a></td>
+<td>Soft_margin_loss</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_tanhshrink.html">nnf_tanhshrink</a></td>
+<td>Tanhshrink</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_threshold.html">nnf_threshold</a></td>
+<td>Threshold</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_threshold.html">nnf_threshold_</a></td>
+<td>Threshold</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_triplet_margin_loss.html">nnf_triplet_margin_loss</a></td>
+<td>Triplet_margin_loss</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_triplet_margin_with_distance_loss.html">nnf_triplet_margin_with_distance_loss</a></td>
+<td>Triplet margin with distance loss</td></tr>
+<tr><td style="width: 25%;"><a href="nnf_unfold.html">nnf_unfold</a></td>
+<td>Unfold</td></tr>
+<tr><td style="width: 25%;"><a href="nn_adaptive_avg_pool1d.html">nn_adaptive_avg_pool1d</a></td>
+<td>Applies a 1D adaptive average pooling over an input signal composed of several input planes.</td></tr>
+<tr><td style="width: 25%;"><a href="nn_adaptive_avg_pool2d.html">nn_adaptive_avg_pool2d</a></td>
+<td>Applies a 2D adaptive average pooling over an input signal composed of several input planes.</td></tr>
+<tr><td style="width: 25%;"><a href="nn_adaptive_avg_pool3d.html">nn_adaptive_avg_pool3d</a></td>
+<td>Applies a 3D adaptive average pooling over an input signal composed of several input planes.</td></tr>
+<tr><td style="width: 25%;"><a href="nn_adaptive_log_softmax_with_loss.html">nn_adaptive_log_softmax_with_loss</a></td>
+<td>AdaptiveLogSoftmaxWithLoss module</td></tr>
+<tr><td style="width: 25%;"><a href="nn_adaptive_max_pool1d.html">nn_adaptive_max_pool1d</a></td>
+<td>Applies a 1D adaptive max pooling over an input signal composed of several input planes.</td></tr>
+<tr><td style="width: 25%;"><a href="nn_adaptive_max_pool2d.html">nn_adaptive_max_pool2d</a></td>
+<td>Applies a 2D adaptive max pooling over an input signal composed of several input planes.</td></tr>
+<tr><td style="width: 25%;"><a href="nn_adaptive_max_pool3d.html">nn_adaptive_max_pool3d</a></td>
+<td>Applies a 3D adaptive max pooling over an input signal composed of several input planes.</td></tr>
+<tr><td style="width: 25%;"><a href="nn_avg_pool1d.html">nn_avg_pool1d</a></td>
+<td>Applies a 1D average pooling over an input signal composed of several input planes.</td></tr>
+<tr><td style="width: 25%;"><a href="nn_avg_pool2d.html">nn_avg_pool2d</a></td>
+<td>Applies a 2D average pooling over an input signal composed of several input planes.</td></tr>
+<tr><td style="width: 25%;"><a href="nn_avg_pool3d.html">nn_avg_pool3d</a></td>
+<td>Applies a 3D average pooling over an input signal composed of several input planes.</td></tr>
+<tr><td style="width: 25%;"><a href="nn_batch_norm1d.html">nn_batch_norm1d</a></td>
+<td>BatchNorm1D module</td></tr>
+<tr><td style="width: 25%;"><a href="nn_batch_norm2d.html">nn_batch_norm2d</a></td>
+<td>BatchNorm2D</td></tr>
+<tr><td style="width: 25%;"><a href="nn_batch_norm3d.html">nn_batch_norm3d</a></td>
+<td>BatchNorm3D</td></tr>
+<tr><td style="width: 25%;"><a href="nn_bce_loss.html">nn_bce_loss</a></td>
+<td>Binary cross entropy loss</td></tr>
+<tr><td style="width: 25%;"><a href="nn_bce_with_logits_loss.html">nn_bce_with_logits_loss</a></td>
+<td>BCE with logits loss</td></tr>
+<tr><td style="width: 25%;"><a href="nn_bilinear.html">nn_bilinear</a></td>
+<td>Bilinear module</td></tr>
+<tr><td style="width: 25%;"><a href="nn_buffer.html">nn_buffer</a></td>
+<td>Creates a nn_buffer</td></tr>
+<tr><td style="width: 25%;"><a href="nn_celu.html">nn_celu</a></td>
+<td>CELU module</td></tr>
+<tr><td style="width: 25%;"><a href="nn_contrib_sparsemax.html">nn_contrib_sparsemax</a></td>
+<td>Sparsemax activation</td></tr>
+<tr><td style="width: 25%;"><a href="nn_conv1d.html">nn_conv1d</a></td>
+<td>Conv1D module</td></tr>
+<tr><td style="width: 25%;"><a href="nn_conv2d.html">nn_conv2d</a></td>
+<td>Conv2D module</td></tr>
+<tr><td style="width: 25%;"><a href="nn_conv3d.html">nn_conv3d</a></td>
+<td>Conv3D module</td></tr>
+<tr><td style="width: 25%;"><a href="nn_conv_transpose1d.html">nn_conv_transpose1d</a></td>
+<td>ConvTranspose1D</td></tr>
+<tr><td style="width: 25%;"><a href="nn_conv_transpose2d.html">nn_conv_transpose2d</a></td>
+<td>ConvTranpose2D module</td></tr>
+<tr><td style="width: 25%;"><a href="nn_conv_transpose3d.html">nn_conv_transpose3d</a></td>
+<td>ConvTranpose3D module</td></tr>
+<tr><td style="width: 25%;"><a href="nn_cosine_embedding_loss.html">nn_cosine_embedding_loss</a></td>
+<td>Cosine embedding loss</td></tr>
+<tr><td style="width: 25%;"><a href="nn_cross_entropy_loss.html">nn_cross_entropy_loss</a></td>
+<td>CrossEntropyLoss module</td></tr>
+<tr><td style="width: 25%;"><a href="nn_ctc_loss.html">nn_ctc_loss</a></td>
+<td>The Connectionist Temporal Classification loss.</td></tr>
+<tr><td style="width: 25%;"><a href="nn_dropout.html">nn_dropout</a></td>
+<td>Dropout module</td></tr>
+<tr><td style="width: 25%;"><a href="nn_dropout2d.html">nn_dropout2d</a></td>
+<td>Dropout2D module</td></tr>
+<tr><td style="width: 25%;"><a href="nn_dropout3d.html">nn_dropout3d</a></td>
+<td>Dropout3D module</td></tr>
+<tr><td style="width: 25%;"><a href="nn_elu.html">nn_elu</a></td>
+<td>ELU module</td></tr>
+<tr><td style="width: 25%;"><a href="nn_embedding.html">nn_embedding</a></td>
+<td>Embedding module</td></tr>
+<tr><td style="width: 25%;"><a href="nn_fractional_max_pool2d.html">nn_fractional_max_pool2d</a></td>
+<td>Applies a 2D fractional max pooling over an input signal composed of several input planes.</td></tr>
+<tr><td style="width: 25%;"><a href="nn_fractional_max_pool3d.html">nn_fractional_max_pool3d</a></td>
+<td>Applies a 3D fractional max pooling over an input signal composed of several input planes.</td></tr>
+<tr><td style="width: 25%;"><a href="nn_gelu.html">nn_gelu</a></td>
+<td>GELU module</td></tr>
+<tr><td style="width: 25%;"><a href="nn_glu.html">nn_glu</a></td>
+<td>GLU module</td></tr>
+<tr><td style="width: 25%;"><a href="nn_group_norm.html">nn_group_norm</a></td>
+<td>Group normalization</td></tr>
+<tr><td style="width: 25%;"><a href="nn_gru.html">nn_gru</a></td>
+<td>Applies a multi-layer gated recurrent unit (GRU) RNN to an input sequence.</td></tr>
+<tr><td style="width: 25%;"><a href="nn_hardshrink.html">nn_hardshrink</a></td>
+<td>Hardshwink module</td></tr>
+<tr><td style="width: 25%;"><a href="nn_hardsigmoid.html">nn_hardsigmoid</a></td>
+<td>Hardsigmoid module</td></tr>
+<tr><td style="width: 25%;"><a href="nn_hardswish.html">nn_hardswish</a></td>
+<td>Hardswish module</td></tr>
+<tr><td style="width: 25%;"><a href="nn_hardtanh.html">nn_hardtanh</a></td>
+<td>Hardtanh module</td></tr>
+<tr><td style="width: 25%;"><a href="nn_hinge_embedding_loss.html">nn_hinge_embedding_loss</a></td>
+<td>Hinge embedding loss</td></tr>
+<tr><td style="width: 25%;"><a href="nn_identity.html">nn_identity</a></td>
+<td>Identity module</td></tr>
+<tr><td style="width: 25%;"><a href="nn_init_calculate_gain.html">nn_init_calculate_gain</a></td>
+<td>Calculate gain</td></tr>
+<tr><td style="width: 25%;"><a href="nn_init_constant_.html">nn_init_constant_</a></td>
+<td>Constant initialization</td></tr>
+<tr><td style="width: 25%;"><a href="nn_init_dirac_.html">nn_init_dirac_</a></td>
+<td>Dirac initialization</td></tr>
+<tr><td style="width: 25%;"><a href="nn_init_eye_.html">nn_init_eye_</a></td>
+<td>Eye initialization</td></tr>
+<tr><td style="width: 25%;"><a href="nn_init_kaiming_normal_.html">nn_init_kaiming_normal_</a></td>
+<td>Kaiming normal initialization</td></tr>
+<tr><td style="width: 25%;"><a href="nn_init_kaiming_uniform_.html">nn_init_kaiming_uniform_</a></td>
+<td>Kaiming uniform initialization</td></tr>
+<tr><td style="width: 25%;"><a href="nn_init_normal_.html">nn_init_normal_</a></td>
+<td>Normal initialization</td></tr>
+<tr><td style="width: 25%;"><a href="nn_init_ones_.html">nn_init_ones_</a></td>
+<td>Ones initialization</td></tr>
+<tr><td style="width: 25%;"><a href="nn_init_orthogonal_.html">nn_init_orthogonal_</a></td>
+<td>Orthogonal initialization</td></tr>
+<tr><td style="width: 25%;"><a href="nn_init_sparse_.html">nn_init_sparse_</a></td>
+<td>Sparse initialization</td></tr>
+<tr><td style="width: 25%;"><a href="nn_init_trunc_normal_.html">nn_init_trunc_normal_</a></td>
+<td>Truncated normal initialization</td></tr>
+<tr><td style="width: 25%;"><a href="nn_init_uniform_.html">nn_init_uniform_</a></td>
+<td>Uniform initialization</td></tr>
+<tr><td style="width: 25%;"><a href="nn_init_xavier_normal_.html">nn_init_xavier_normal_</a></td>
+<td>Xavier normal initialization</td></tr>
+<tr><td style="width: 25%;"><a href="nn_init_xavier_uniform_.html">nn_init_xavier_uniform_</a></td>
+<td>Xavier uniform initialization</td></tr>
+<tr><td style="width: 25%;"><a href="nn_init_zeros_.html">nn_init_zeros_</a></td>
+<td>Zeros initialization</td></tr>
+<tr><td style="width: 25%;"><a href="nn_kl_div_loss.html">nn_kl_div_loss</a></td>
+<td>Kullback-Leibler divergence loss</td></tr>
+<tr><td style="width: 25%;"><a href="nn_l1_loss.html">nn_l1_loss</a></td>
+<td>L1 loss</td></tr>
+<tr><td style="width: 25%;"><a href="nn_layer_norm.html">nn_layer_norm</a></td>
+<td>Layer normalization</td></tr>
+<tr><td style="width: 25%;"><a href="nn_leaky_relu.html">nn_leaky_relu</a></td>
+<td>LeakyReLU module</td></tr>
+<tr><td style="width: 25%;"><a href="nn_linear.html">nn_linear</a></td>
+<td>Linear module</td></tr>
+<tr><td style="width: 25%;"><a href="nn_log_sigmoid.html">nn_log_sigmoid</a></td>
+<td>LogSigmoid module</td></tr>
+<tr><td style="width: 25%;"><a href="nn_log_softmax.html">nn_log_softmax</a></td>
+<td>LogSoftmax module</td></tr>
+<tr><td style="width: 25%;"><a href="nn_lp_pool1d.html">nn_lp_pool1d</a></td>
+<td>Applies a 1D power-average pooling over an input signal composed of several input planes.</td></tr>
+<tr><td style="width: 25%;"><a href="nn_lp_pool2d.html">nn_lp_pool2d</a></td>
+<td>Applies a 2D power-average pooling over an input signal composed of several input planes.</td></tr>
+<tr><td style="width: 25%;"><a href="nn_lstm.html">nn_lstm</a></td>
+<td>Applies a multi-layer long short-term memory (LSTM) RNN to an input sequence.</td></tr>
+<tr><td style="width: 25%;"><a href="nn_margin_ranking_loss.html">nn_margin_ranking_loss</a></td>
+<td>Margin ranking loss</td></tr>
+<tr><td style="width: 25%;"><a href="nn_max_pool1d.html">nn_max_pool1d</a></td>
+<td>MaxPool1D module</td></tr>
+<tr><td style="width: 25%;"><a href="nn_max_pool2d.html">nn_max_pool2d</a></td>
+<td>MaxPool2D module</td></tr>
+<tr><td style="width: 25%;"><a href="nn_max_pool3d.html">nn_max_pool3d</a></td>
+<td>Applies a 3D max pooling over an input signal composed of several input planes.</td></tr>
+<tr><td style="width: 25%;"><a href="nn_max_unpool1d.html">nn_max_unpool1d</a></td>
+<td>Computes a partial inverse of 'MaxPool1d'.</td></tr>
+<tr><td style="width: 25%;"><a href="nn_max_unpool2d.html">nn_max_unpool2d</a></td>
+<td>Computes a partial inverse of 'MaxPool2d'.</td></tr>
+<tr><td style="width: 25%;"><a href="nn_max_unpool3d.html">nn_max_unpool3d</a></td>
+<td>Computes a partial inverse of 'MaxPool3d'.</td></tr>
+<tr><td style="width: 25%;"><a href="nn_module.html">nn_module</a></td>
+<td>Base class for all neural network modules.</td></tr>
+<tr><td style="width: 25%;"><a href="nn_module_list.html">nn_module_list</a></td>
+<td>Holds submodules in a list.</td></tr>
+<tr><td style="width: 25%;"><a href="nn_mse_loss.html">nn_mse_loss</a></td>
+<td>MSE loss</td></tr>
+<tr><td style="width: 25%;"><a href="nn_multihead_attention.html">nn_multihead_attention</a></td>
+<td>MultiHead attention</td></tr>
+<tr><td style="width: 25%;"><a href="nn_multilabel_margin_loss.html">nn_multilabel_margin_loss</a></td>
+<td>Multilabel margin loss</td></tr>
+<tr><td style="width: 25%;"><a href="nn_multilabel_soft_margin_loss.html">nn_multilabel_soft_margin_loss</a></td>
+<td>Multi label soft margin loss</td></tr>
+<tr><td style="width: 25%;"><a href="nn_multi_margin_loss.html">nn_multi_margin_loss</a></td>
+<td>Multi margin loss</td></tr>
+<tr><td style="width: 25%;"><a href="nn_nll_loss.html">nn_nll_loss</a></td>
+<td>Nll loss</td></tr>
+<tr><td style="width: 25%;"><a href="nn_pairwise_distance.html">nn_pairwise_distance</a></td>
+<td>Pairwise distance</td></tr>
+<tr><td style="width: 25%;"><a href="nn_parameter.html">nn_parameter</a></td>
+<td>Creates an 'nn_parameter'</td></tr>
+<tr><td style="width: 25%;"><a href="nn_poisson_nll_loss.html">nn_poisson_nll_loss</a></td>
+<td>Poisson NLL loss</td></tr>
+<tr><td style="width: 25%;"><a href="nn_prelu.html">nn_prelu</a></td>
+<td>PReLU module</td></tr>
+<tr><td style="width: 25%;"><a href="nn_relu.html">nn_relu</a></td>
+<td>ReLU module</td></tr>
+<tr><td style="width: 25%;"><a href="nn_relu6.html">nn_relu6</a></td>
+<td>ReLu6 module</td></tr>
+<tr><td style="width: 25%;"><a href="nn_rnn.html">nn_rnn</a></td>
+<td>RNN module</td></tr>
+<tr><td style="width: 25%;"><a href="nn_rrelu.html">nn_rrelu</a></td>
+<td>RReLU module</td></tr>
+<tr><td style="width: 25%;"><a href="nn_selu.html">nn_selu</a></td>
+<td>SELU module</td></tr>
+<tr><td style="width: 25%;"><a href="nn_sequential.html">nn_sequential</a></td>
+<td>A sequential container</td></tr>
+<tr><td style="width: 25%;"><a href="nn_sigmoid.html">nn_sigmoid</a></td>
+<td>Sigmoid module</td></tr>
+<tr><td style="width: 25%;"><a href="nn_smooth_l1_loss.html">nn_smooth_l1_loss</a></td>
+<td>Smooth L1 loss</td></tr>
+<tr><td style="width: 25%;"><a href="nn_softmax.html">nn_softmax</a></td>
+<td>Softmax module</td></tr>
+<tr><td style="width: 25%;"><a href="nn_softmax2d.html">nn_softmax2d</a></td>
+<td>Softmax2d module</td></tr>
+<tr><td style="width: 25%;"><a href="nn_softmin.html">nn_softmin</a></td>
+<td>Softmin</td></tr>
+<tr><td style="width: 25%;"><a href="nn_softplus.html">nn_softplus</a></td>
+<td>Softplus module</td></tr>
+<tr><td style="width: 25%;"><a href="nn_softshrink.html">nn_softshrink</a></td>
+<td>Softshrink module</td></tr>
+<tr><td style="width: 25%;"><a href="nn_softsign.html">nn_softsign</a></td>
+<td>Softsign module</td></tr>
+<tr><td style="width: 25%;"><a href="nn_soft_margin_loss.html">nn_soft_margin_loss</a></td>
+<td>Soft margin loss</td></tr>
+<tr><td style="width: 25%;"><a href="nn_tanh.html">nn_tanh</a></td>
+<td>Tanh module</td></tr>
+<tr><td style="width: 25%;"><a href="nn_tanhshrink.html">nn_tanhshrink</a></td>
+<td>Tanhshrink module</td></tr>
+<tr><td style="width: 25%;"><a href="nn_threshold.html">nn_threshold</a></td>
+<td>Threshoold module</td></tr>
+<tr><td style="width: 25%;"><a href="nn_triplet_margin_loss.html">nn_triplet_margin_loss</a></td>
+<td>Triplet margin loss</td></tr>
+<tr><td style="width: 25%;"><a href="nn_triplet_margin_with_distance_loss.html">nn_triplet_margin_with_distance_loss</a></td>
+<td>Triplet margin with distance loss</td></tr>
+<tr><td style="width: 25%;"><a href="nn_utils_clip_grad_norm_.html">nn_utils_clip_grad_norm_</a></td>
+<td>Clips gradient norm of an iterable of parameters.</td></tr>
+<tr><td style="width: 25%;"><a href="nn_utils_clip_grad_value_.html">nn_utils_clip_grad_value_</a></td>
+<td>Clips gradient of an iterable of parameters at specified value.</td></tr>
+<tr><td style="width: 25%;"><a href="nn_utils_rnn_pack_padded_sequence.html">nn_utils_rnn_pack_padded_sequence</a></td>
+<td>Packs a Tensor containing padded sequences of variable length.</td></tr>
+<tr><td style="width: 25%;"><a href="nn_utils_rnn_pack_sequence.html">nn_utils_rnn_pack_sequence</a></td>
+<td>Packs a list of variable length Tensors</td></tr>
+<tr><td style="width: 25%;"><a href="nn_utils_rnn_pad_packed_sequence.html">nn_utils_rnn_pad_packed_sequence</a></td>
+<td>Pads a packed batch of variable length sequences.</td></tr>
+<tr><td style="width: 25%;"><a href="nn_utils_rnn_pad_sequence.html">nn_utils_rnn_pad_sequence</a></td>
+<td>Pad a list of variable length Tensors with 'padding_value'</td></tr>
+</table>
+
+<h2><a name="O">-- O --</a></h2>
+
+<table width="100%">
+<tr><td style="width: 25%;"><a href="optimizer.html">optimizer</a></td>
+<td>Creates a custom optimizer</td></tr>
+<tr><td style="width: 25%;"><a href="optim_adadelta.html">optim_adadelta</a></td>
+<td>Adadelta optimizer</td></tr>
+<tr><td style="width: 25%;"><a href="optim_adagrad.html">optim_adagrad</a></td>
+<td>Adagrad optimizer</td></tr>
+<tr><td style="width: 25%;"><a href="optim_adam.html">optim_adam</a></td>
+<td>Implements Adam algorithm.</td></tr>
+<tr><td style="width: 25%;"><a href="optim_asgd.html">optim_asgd</a></td>
+<td>Averaged Stochastic Gradient Descent optimizer</td></tr>
+<tr><td style="width: 25%;"><a href="optim_lbfgs.html">optim_lbfgs</a></td>
+<td>LBFGS optimizer</td></tr>
+<tr><td style="width: 25%;"><a href="optim_required.html">optim_required</a></td>
+<td>Dummy value indicating a required value.</td></tr>
+<tr><td style="width: 25%;"><a href="optim_rmsprop.html">optim_rmsprop</a></td>
+<td>RMSprop optimizer</td></tr>
+<tr><td style="width: 25%;"><a href="optim_rprop.html">optim_rprop</a></td>
+<td>Implements the resilient backpropagation algorithm.</td></tr>
+<tr><td style="width: 25%;"><a href="optim_sgd.html">optim_sgd</a></td>
+<td>SGD optimizer</td></tr>
+</table>
+
+<h2><a name="S">-- S --</a></h2>
+
+<table width="100%">
+<tr><td style="width: 25%;"><a href="slc.html">slc</a></td>
+<td>Creates a slice</td></tr>
+</table>
+
+<h2><a name="T">-- T --</a></h2>
+
+<table width="100%">
+<tr><td style="width: 25%;"><a href="tensor_dataset.html">tensor_dataset</a></td>
+<td>Dataset wrapping tensors.</td></tr>
+<tr><td style="width: 25%;"><a href="threads.html">threads</a></td>
+<td>Number of threads</td></tr>
+<tr><td style="width: 25%;"><a href="torch_abs.html">torch_abs</a></td>
+<td>Abs</td></tr>
+<tr><td style="width: 25%;"><a href="torch_absolute.html">torch_absolute</a></td>
+<td>Absolute</td></tr>
+<tr><td style="width: 25%;"><a href="torch_acos.html">torch_acos</a></td>
+<td>Acos</td></tr>
+<tr><td style="width: 25%;"><a href="torch_acosh.html">torch_acosh</a></td>
+<td>Acosh</td></tr>
+<tr><td style="width: 25%;"><a href="torch_adaptive_avg_pool1d.html">torch_adaptive_avg_pool1d</a></td>
+<td>Adaptive_avg_pool1d</td></tr>
+<tr><td style="width: 25%;"><a href="torch_add.html">torch_add</a></td>
+<td>Add</td></tr>
+<tr><td style="width: 25%;"><a href="torch_addbmm.html">torch_addbmm</a></td>
+<td>Addbmm</td></tr>
+<tr><td style="width: 25%;"><a href="torch_addcdiv.html">torch_addcdiv</a></td>
+<td>Addcdiv</td></tr>
+<tr><td style="width: 25%;"><a href="torch_addcmul.html">torch_addcmul</a></td>
+<td>Addcmul</td></tr>
+<tr><td style="width: 25%;"><a href="torch_addmm.html">torch_addmm</a></td>
+<td>Addmm</td></tr>
+<tr><td style="width: 25%;"><a href="torch_addmv.html">torch_addmv</a></td>
+<td>Addmv</td></tr>
+<tr><td style="width: 25%;"><a href="torch_addr.html">torch_addr</a></td>
+<td>Addr</td></tr>
+<tr><td style="width: 25%;"><a href="torch_allclose.html">torch_allclose</a></td>
+<td>Allclose</td></tr>
+<tr><td style="width: 25%;"><a href="torch_amax.html">torch_amax</a></td>
+<td>Amax</td></tr>
+<tr><td style="width: 25%;"><a href="torch_amin.html">torch_amin</a></td>
+<td>Amin</td></tr>
+<tr><td style="width: 25%;"><a href="torch_angle.html">torch_angle</a></td>
+<td>Angle</td></tr>
+<tr><td style="width: 25%;"><a href="torch_arange.html">torch_arange</a></td>
+<td>Arange</td></tr>
+<tr><td style="width: 25%;"><a href="torch_arccos.html">torch_arccos</a></td>
+<td>Arccos</td></tr>
+<tr><td style="width: 25%;"><a href="torch_arccosh.html">torch_arccosh</a></td>
+<td>Arccosh</td></tr>
+<tr><td style="width: 25%;"><a href="torch_arcsin.html">torch_arcsin</a></td>
+<td>Arcsin</td></tr>
+<tr><td style="width: 25%;"><a href="torch_arcsinh.html">torch_arcsinh</a></td>
+<td>Arcsinh</td></tr>
+<tr><td style="width: 25%;"><a href="torch_arctan.html">torch_arctan</a></td>
+<td>Arctan</td></tr>
+<tr><td style="width: 25%;"><a href="torch_arctanh.html">torch_arctanh</a></td>
+<td>Arctanh</td></tr>
+<tr><td style="width: 25%;"><a href="torch_argmax.html">torch_argmax</a></td>
+<td>Argmax</td></tr>
+<tr><td style="width: 25%;"><a href="torch_argmin.html">torch_argmin</a></td>
+<td>Argmin</td></tr>
+<tr><td style="width: 25%;"><a href="torch_argsort.html">torch_argsort</a></td>
+<td>Argsort</td></tr>
+<tr><td style="width: 25%;"><a href="torch_asin.html">torch_asin</a></td>
+<td>Asin</td></tr>
+<tr><td style="width: 25%;"><a href="torch_asinh.html">torch_asinh</a></td>
+<td>Asinh</td></tr>
+<tr><td style="width: 25%;"><a href="torch_as_strided.html">torch_as_strided</a></td>
+<td>As_strided</td></tr>
+<tr><td style="width: 25%;"><a href="torch_atan.html">torch_atan</a></td>
+<td>Atan</td></tr>
+<tr><td style="width: 25%;"><a href="torch_atan2.html">torch_atan2</a></td>
+<td>Atan2</td></tr>
+<tr><td style="width: 25%;"><a href="torch_atanh.html">torch_atanh</a></td>
+<td>Atanh</td></tr>
+<tr><td style="width: 25%;"><a href="torch_atleast_1d.html">torch_atleast_1d</a></td>
+<td>Atleast_1d</td></tr>
+<tr><td style="width: 25%;"><a href="torch_atleast_2d.html">torch_atleast_2d</a></td>
+<td>Atleast_2d</td></tr>
+<tr><td style="width: 25%;"><a href="torch_atleast_3d.html">torch_atleast_3d</a></td>
+<td>Atleast_3d</td></tr>
+<tr><td style="width: 25%;"><a href="torch_avg_pool1d.html">torch_avg_pool1d</a></td>
+<td>Avg_pool1d</td></tr>
+<tr><td style="width: 25%;"><a href="torch_baddbmm.html">torch_baddbmm</a></td>
+<td>Baddbmm</td></tr>
+<tr><td style="width: 25%;"><a href="torch_bartlett_window.html">torch_bartlett_window</a></td>
+<td>Bartlett_window</td></tr>
+<tr><td style="width: 25%;"><a href="torch_bernoulli.html">torch_bernoulli</a></td>
+<td>Bernoulli</td></tr>
+<tr><td style="width: 25%;"><a href="torch_bincount.html">torch_bincount</a></td>
+<td>Bincount</td></tr>
+<tr><td style="width: 25%;"><a href="torch_bitwise_and.html">torch_bitwise_and</a></td>
+<td>Bitwise_and</td></tr>
+<tr><td style="width: 25%;"><a href="torch_bitwise_not.html">torch_bitwise_not</a></td>
+<td>Bitwise_not</td></tr>
+<tr><td style="width: 25%;"><a href="torch_bitwise_or.html">torch_bitwise_or</a></td>
+<td>Bitwise_or</td></tr>
+<tr><td style="width: 25%;"><a href="torch_bitwise_xor.html">torch_bitwise_xor</a></td>
+<td>Bitwise_xor</td></tr>
+<tr><td style="width: 25%;"><a href="torch_blackman_window.html">torch_blackman_window</a></td>
+<td>Blackman_window</td></tr>
+<tr><td style="width: 25%;"><a href="torch_block_diag.html">torch_block_diag</a></td>
+<td>Block_diag</td></tr>
+<tr><td style="width: 25%;"><a href="torch_bmm.html">torch_bmm</a></td>
+<td>Bmm</td></tr>
+<tr><td style="width: 25%;"><a href="torch_dtype.html">torch_bool</a></td>
+<td>Torch data types</td></tr>
+<tr><td style="width: 25%;"><a href="torch_broadcast_tensors.html">torch_broadcast_tensors</a></td>
+<td>Broadcast_tensors</td></tr>
+<tr><td style="width: 25%;"><a href="torch_bucketize.html">torch_bucketize</a></td>
+<td>Bucketize</td></tr>
+<tr><td style="width: 25%;"><a href="torch_can_cast.html">torch_can_cast</a></td>
+<td>Can_cast</td></tr>
+<tr><td style="width: 25%;"><a href="torch_cartesian_prod.html">torch_cartesian_prod</a></td>
+<td>Cartesian_prod</td></tr>
+<tr><td style="width: 25%;"><a href="torch_cat.html">torch_cat</a></td>
+<td>Cat</td></tr>
+<tr><td style="width: 25%;"><a href="torch_cdist.html">torch_cdist</a></td>
+<td>Cdist</td></tr>
+<tr><td style="width: 25%;"><a href="torch_ceil.html">torch_ceil</a></td>
+<td>Ceil</td></tr>
+<tr><td style="width: 25%;"><a href="torch_celu.html">torch_celu</a></td>
+<td>Celu</td></tr>
+<tr><td style="width: 25%;"><a href="torch_celu_.html">torch_celu_</a></td>
+<td>Celu_</td></tr>
+<tr><td style="width: 25%;"><a href="torch_chain_matmul.html">torch_chain_matmul</a></td>
+<td>Chain_matmul</td></tr>
+<tr><td style="width: 25%;"><a href="torch_memory_format.html">torch_channels_last_format</a></td>
+<td>Memory format</td></tr>
+<tr><td style="width: 25%;"><a href="torch_channel_shuffle.html">torch_channel_shuffle</a></td>
+<td>Channel_shuffle</td></tr>
+<tr><td style="width: 25%;"><a href="torch_cholesky.html">torch_cholesky</a></td>
+<td>Cholesky</td></tr>
+<tr><td style="width: 25%;"><a href="torch_cholesky_inverse.html">torch_cholesky_inverse</a></td>
+<td>Cholesky_inverse</td></tr>
+<tr><td style="width: 25%;"><a href="torch_cholesky_solve.html">torch_cholesky_solve</a></td>
+<td>Cholesky_solve</td></tr>
+<tr><td style="width: 25%;"><a href="torch_chunk.html">torch_chunk</a></td>
+<td>Chunk</td></tr>
+<tr><td style="width: 25%;"><a href="torch_clamp.html">torch_clamp</a></td>
+<td>Clamp</td></tr>
+<tr><td style="width: 25%;"><a href="torch_clip.html">torch_clip</a></td>
+<td>Clip</td></tr>
+<tr><td style="width: 25%;"><a href="torch_clone.html">torch_clone</a></td>
+<td>Clone</td></tr>
+<tr><td style="width: 25%;"><a href="torch_combinations.html">torch_combinations</a></td>
+<td>Combinations</td></tr>
+<tr><td style="width: 25%;"><a href="torch_complex.html">torch_complex</a></td>
+<td>Complex</td></tr>
+<tr><td style="width: 25%;"><a href="torch_conj.html">torch_conj</a></td>
+<td>Conj</td></tr>
+<tr><td style="width: 25%;"><a href="torch_memory_format.html">torch_contiguous_format</a></td>
+<td>Memory format</td></tr>
+<tr><td style="width: 25%;"><a href="torch_conv1d.html">torch_conv1d</a></td>
+<td>Conv1d</td></tr>
+<tr><td style="width: 25%;"><a href="torch_conv2d.html">torch_conv2d</a></td>
+<td>Conv2d</td></tr>
+<tr><td style="width: 25%;"><a href="torch_conv3d.html">torch_conv3d</a></td>
+<td>Conv3d</td></tr>
+<tr><td style="width: 25%;"><a href="torch_conv_tbc.html">torch_conv_tbc</a></td>
+<td>Conv_tbc</td></tr>
+<tr><td style="width: 25%;"><a href="torch_conv_transpose1d.html">torch_conv_transpose1d</a></td>
+<td>Conv_transpose1d</td></tr>
+<tr><td style="width: 25%;"><a href="torch_conv_transpose2d.html">torch_conv_transpose2d</a></td>
+<td>Conv_transpose2d</td></tr>
+<tr><td style="width: 25%;"><a href="torch_conv_transpose3d.html">torch_conv_transpose3d</a></td>
+<td>Conv_transpose3d</td></tr>
+<tr><td style="width: 25%;"><a href="torch_cos.html">torch_cos</a></td>
+<td>Cos</td></tr>
+<tr><td style="width: 25%;"><a href="torch_cosh.html">torch_cosh</a></td>
+<td>Cosh</td></tr>
+<tr><td style="width: 25%;"><a href="torch_cosine_similarity.html">torch_cosine_similarity</a></td>
+<td>Cosine_similarity</td></tr>
+<tr><td style="width: 25%;"><a href="torch_count_nonzero.html">torch_count_nonzero</a></td>
+<td>Count_nonzero</td></tr>
+<tr><td style="width: 25%;"><a href="torch_cross.html">torch_cross</a></td>
+<td>Cross</td></tr>
+<tr><td style="width: 25%;"><a href="torch_cummax.html">torch_cummax</a></td>
+<td>Cummax</td></tr>
+<tr><td style="width: 25%;"><a href="torch_cummin.html">torch_cummin</a></td>
+<td>Cummin</td></tr>
+<tr><td style="width: 25%;"><a href="torch_cumprod.html">torch_cumprod</a></td>
+<td>Cumprod</td></tr>
+<tr><td style="width: 25%;"><a href="torch_cumsum.html">torch_cumsum</a></td>
+<td>Cumsum</td></tr>
+<tr><td style="width: 25%;"><a href="torch_deg2rad.html">torch_deg2rad</a></td>
+<td>Deg2rad</td></tr>
+<tr><td style="width: 25%;"><a href="torch_dequantize.html">torch_dequantize</a></td>
+<td>Dequantize</td></tr>
+<tr><td style="width: 25%;"><a href="torch_det.html">torch_det</a></td>
+<td>Det</td></tr>
+<tr><td style="width: 25%;"><a href="torch_device.html">torch_device</a></td>
+<td>Create a Device object</td></tr>
+<tr><td style="width: 25%;"><a href="torch_diag.html">torch_diag</a></td>
+<td>Diag</td></tr>
+<tr><td style="width: 25%;"><a href="torch_diagflat.html">torch_diagflat</a></td>
+<td>Diagflat</td></tr>
+<tr><td style="width: 25%;"><a href="torch_diagonal.html">torch_diagonal</a></td>
+<td>Diagonal</td></tr>
+<tr><td style="width: 25%;"><a href="torch_diag_embed.html">torch_diag_embed</a></td>
+<td>Diag_embed</td></tr>
+<tr><td style="width: 25%;"><a href="torch_diff.html">torch_diff</a></td>
+<td>Computes the n-th forward difference along the given dimension.</td></tr>
+<tr><td style="width: 25%;"><a href="torch_digamma.html">torch_digamma</a></td>
+<td>Digamma</td></tr>
+<tr><td style="width: 25%;"><a href="torch_dist.html">torch_dist</a></td>
+<td>Dist</td></tr>
+<tr><td style="width: 25%;"><a href="torch_div.html">torch_div</a></td>
+<td>Div</td></tr>
+<tr><td style="width: 25%;"><a href="torch_divide.html">torch_divide</a></td>
+<td>Divide</td></tr>
+<tr><td style="width: 25%;"><a href="torch_dot.html">torch_dot</a></td>
+<td>Dot</td></tr>
+<tr><td style="width: 25%;"><a href="torch_dtype.html">torch_double</a></td>
+<td>Torch data types</td></tr>
+<tr><td style="width: 25%;"><a href="torch_dstack.html">torch_dstack</a></td>
+<td>Dstack</td></tr>
+<tr><td style="width: 25%;"><a href="torch_dtype.html">torch_dtype</a></td>
+<td>Torch data types</td></tr>
+<tr><td style="width: 25%;"><a href="torch_eig.html">torch_eig</a></td>
+<td>Eig</td></tr>
+<tr><td style="width: 25%;"><a href="torch_einsum.html">torch_einsum</a></td>
+<td>Einsum</td></tr>
+<tr><td style="width: 25%;"><a href="torch_empty.html">torch_empty</a></td>
+<td>Empty</td></tr>
+<tr><td style="width: 25%;"><a href="torch_empty_like.html">torch_empty_like</a></td>
+<td>Empty_like</td></tr>
+<tr><td style="width: 25%;"><a href="torch_empty_strided.html">torch_empty_strided</a></td>
+<td>Empty_strided</td></tr>
+<tr><td style="width: 25%;"><a href="torch_eq.html">torch_eq</a></td>
+<td>Eq</td></tr>
+<tr><td style="width: 25%;"><a href="torch_equal.html">torch_equal</a></td>
+<td>Equal</td></tr>
+<tr><td style="width: 25%;"><a href="torch_erf.html">torch_erf</a></td>
+<td>Erf</td></tr>
+<tr><td style="width: 25%;"><a href="torch_erfc.html">torch_erfc</a></td>
+<td>Erfc</td></tr>
+<tr><td style="width: 25%;"><a href="torch_erfinv.html">torch_erfinv</a></td>
+<td>Erfinv</td></tr>
+<tr><td style="width: 25%;"><a href="torch_exp.html">torch_exp</a></td>
+<td>Exp</td></tr>
+<tr><td style="width: 25%;"><a href="torch_exp2.html">torch_exp2</a></td>
+<td>Exp2</td></tr>
+<tr><td style="width: 25%;"><a href="torch_expm1.html">torch_expm1</a></td>
+<td>Expm1</td></tr>
+<tr><td style="width: 25%;"><a href="torch_eye.html">torch_eye</a></td>
+<td>Eye</td></tr>
+<tr><td style="width: 25%;"><a href="torch_fft_fft.html">torch_fft_fft</a></td>
+<td>Fft</td></tr>
+<tr><td style="width: 25%;"><a href="torch_fft_ifft.html">torch_fft_ifft</a></td>
+<td>Ifft</td></tr>
+<tr><td style="width: 25%;"><a href="torch_fft_irfft.html">torch_fft_irfft</a></td>
+<td>Irfft</td></tr>
+<tr><td style="width: 25%;"><a href="torch_fft_rfft.html">torch_fft_rfft</a></td>
+<td>Rfft</td></tr>
+<tr><td style="width: 25%;"><a href="torch_finfo.html">torch_finfo</a></td>
+<td>Floating point type info</td></tr>
+<tr><td style="width: 25%;"><a href="torch_fix.html">torch_fix</a></td>
+<td>Fix</td></tr>
+<tr><td style="width: 25%;"><a href="torch_flatten.html">torch_flatten</a></td>
+<td>Flatten</td></tr>
+<tr><td style="width: 25%;"><a href="torch_flip.html">torch_flip</a></td>
+<td>Flip</td></tr>
+<tr><td style="width: 25%;"><a href="torch_fliplr.html">torch_fliplr</a></td>
+<td>Fliplr</td></tr>
+<tr><td style="width: 25%;"><a href="torch_flipud.html">torch_flipud</a></td>
+<td>Flipud</td></tr>
+<tr><td style="width: 25%;"><a href="torch_dtype.html">torch_float</a></td>
+<td>Torch data types</td></tr>
+<tr><td style="width: 25%;"><a href="torch_dtype.html">torch_float16</a></td>
+<td>Torch data types</td></tr>
+<tr><td style="width: 25%;"><a href="torch_dtype.html">torch_float32</a></td>
+<td>Torch data types</td></tr>
+<tr><td style="width: 25%;"><a href="torch_dtype.html">torch_float64</a></td>
+<td>Torch data types</td></tr>
+<tr><td style="width: 25%;"><a href="torch_floor.html">torch_floor</a></td>
+<td>Floor</td></tr>
+<tr><td style="width: 25%;"><a href="torch_floor_divide.html">torch_floor_divide</a></td>
+<td>Floor_divide</td></tr>
+<tr><td style="width: 25%;"><a href="torch_fmod.html">torch_fmod</a></td>
+<td>Fmod</td></tr>
+<tr><td style="width: 25%;"><a href="torch_frac.html">torch_frac</a></td>
+<td>Frac</td></tr>
+<tr><td style="width: 25%;"><a href="torch_full.html">torch_full</a></td>
+<td>Full</td></tr>
+<tr><td style="width: 25%;"><a href="torch_full_like.html">torch_full_like</a></td>
+<td>Full_like</td></tr>
+<tr><td style="width: 25%;"><a href="torch_gather.html">torch_gather</a></td>
+<td>Gather</td></tr>
+<tr><td style="width: 25%;"><a href="torch_gcd.html">torch_gcd</a></td>
+<td>Gcd</td></tr>
+<tr><td style="width: 25%;"><a href="torch_ge.html">torch_ge</a></td>
+<td>Ge</td></tr>
+<tr><td style="width: 25%;"><a href="torch_generator.html">torch_generator</a></td>
+<td>Create a Generator object</td></tr>
+<tr><td style="width: 25%;"><a href="torch_geqrf.html">torch_geqrf</a></td>
+<td>Geqrf</td></tr>
+<tr><td style="width: 25%;"><a href="torch_ger.html">torch_ger</a></td>
+<td>Ger</td></tr>
+<tr><td style="width: 25%;"><a href="default_dtype.html">torch_get_default_dtype</a></td>
+<td>Gets and sets the default floating point dtype.</td></tr>
+<tr><td style="width: 25%;"><a href="threads.html">torch_get_num_interop_threads</a></td>
+<td>Number of threads</td></tr>
+<tr><td style="width: 25%;"><a href="threads.html">torch_get_num_threads</a></td>
+<td>Number of threads</td></tr>
+<tr><td style="width: 25%;"><a href="torch_greater.html">torch_greater</a></td>
+<td>Greater</td></tr>
+<tr><td style="width: 25%;"><a href="torch_greater_equal.html">torch_greater_equal</a></td>
+<td>Greater_equal</td></tr>
+<tr><td style="width: 25%;"><a href="torch_gt.html">torch_gt</a></td>
+<td>Gt</td></tr>
+<tr><td style="width: 25%;"><a href="torch_dtype.html">torch_half</a></td>
+<td>Torch data types</td></tr>
+<tr><td style="width: 25%;"><a href="torch_hamming_window.html">torch_hamming_window</a></td>
+<td>Hamming_window</td></tr>
+<tr><td style="width: 25%;"><a href="torch_hann_window.html">torch_hann_window</a></td>
+<td>Hann_window</td></tr>
+<tr><td style="width: 25%;"><a href="torch_heaviside.html">torch_heaviside</a></td>
+<td>Heaviside</td></tr>
+<tr><td style="width: 25%;"><a href="torch_histc.html">torch_histc</a></td>
+<td>Histc</td></tr>
+<tr><td style="width: 25%;"><a href="torch_hstack.html">torch_hstack</a></td>
+<td>Hstack</td></tr>
+<tr><td style="width: 25%;"><a href="torch_hypot.html">torch_hypot</a></td>
+<td>Hypot</td></tr>
+<tr><td style="width: 25%;"><a href="torch_i0.html">torch_i0</a></td>
+<td>I0</td></tr>
+<tr><td style="width: 25%;"><a href="torch_iinfo.html">torch_iinfo</a></td>
+<td>Integer type info</td></tr>
+<tr><td style="width: 25%;"><a href="torch_imag.html">torch_imag</a></td>
+<td>Imag</td></tr>
+<tr><td style="width: 25%;"><a href="torch_index.html">torch_index</a></td>
+<td>Index torch tensors</td></tr>
+<tr><td style="width: 25%;"><a href="torch_index_put.html">torch_index_put</a></td>
+<td>Modify values selected by 'indices'.</td></tr>
+<tr><td style="width: 25%;"><a href="torch_index_put_.html">torch_index_put_</a></td>
+<td>In-place version of 'torch_index_put'.</td></tr>
+<tr><td style="width: 25%;"><a href="torch_index_select.html">torch_index_select</a></td>
+<td>Index_select</td></tr>
+<tr><td style="width: 25%;"><a href="torch_dtype.html">torch_int</a></td>
+<td>Torch data types</td></tr>
+<tr><td style="width: 25%;"><a href="torch_dtype.html">torch_int16</a></td>
+<td>Torch data types</td></tr>
+<tr><td style="width: 25%;"><a href="torch_dtype.html">torch_int32</a></td>
+<td>Torch data types</td></tr>
+<tr><td style="width: 25%;"><a href="torch_dtype.html">torch_int64</a></td>
+<td>Torch data types</td></tr>
+<tr><td style="width: 25%;"><a href="torch_dtype.html">torch_int8</a></td>
+<td>Torch data types</td></tr>
+<tr><td style="width: 25%;"><a href="torch_inverse.html">torch_inverse</a></td>
+<td>Inverse</td></tr>
+<tr><td style="width: 25%;"><a href="torch_isclose.html">torch_isclose</a></td>
+<td>Isclose</td></tr>
+<tr><td style="width: 25%;"><a href="torch_isfinite.html">torch_isfinite</a></td>
+<td>Isfinite</td></tr>
+<tr><td style="width: 25%;"><a href="torch_isinf.html">torch_isinf</a></td>
+<td>Isinf</td></tr>
+<tr><td style="width: 25%;"><a href="torch_isnan.html">torch_isnan</a></td>
+<td>Isnan</td></tr>
+<tr><td style="width: 25%;"><a href="torch_isneginf.html">torch_isneginf</a></td>
+<td>Isneginf</td></tr>
+<tr><td style="width: 25%;"><a href="torch_isposinf.html">torch_isposinf</a></td>
+<td>Isposinf</td></tr>
+<tr><td style="width: 25%;"><a href="torch_isreal.html">torch_isreal</a></td>
+<td>Isreal</td></tr>
+<tr><td style="width: 25%;"><a href="torch_istft.html">torch_istft</a></td>
+<td>Istft</td></tr>
+<tr><td style="width: 25%;"><a href="torch_is_complex.html">torch_is_complex</a></td>
+<td>Is_complex</td></tr>
+<tr><td style="width: 25%;"><a href="torch_is_floating_point.html">torch_is_floating_point</a></td>
+<td>Is_floating_point</td></tr>
+<tr><td style="width: 25%;"><a href="torch_is_installed.html">torch_is_installed</a></td>
+<td>Verifies if torch is installed</td></tr>
+<tr><td style="width: 25%;"><a href="torch_is_nonzero.html">torch_is_nonzero</a></td>
+<td>Is_nonzero</td></tr>
+<tr><td style="width: 25%;"><a href="torch_kaiser_window.html">torch_kaiser_window</a></td>
+<td>Kaiser_window</td></tr>
+<tr><td style="width: 25%;"><a href="torch_kthvalue.html">torch_kthvalue</a></td>
+<td>Kthvalue</td></tr>
+<tr><td style="width: 25%;"><a href="torch_layout.html">torch_layout</a></td>
+<td>Creates the corresponding layout</td></tr>
+<tr><td style="width: 25%;"><a href="torch_lcm.html">torch_lcm</a></td>
+<td>Lcm</td></tr>
+<tr><td style="width: 25%;"><a href="torch_le.html">torch_le</a></td>
+<td>Le</td></tr>
+<tr><td style="width: 25%;"><a href="torch_lerp.html">torch_lerp</a></td>
+<td>Lerp</td></tr>
+<tr><td style="width: 25%;"><a href="torch_less.html">torch_less</a></td>
+<td>Less</td></tr>
+<tr><td style="width: 25%;"><a href="torch_less_equal.html">torch_less_equal</a></td>
+<td>Less_equal</td></tr>
+<tr><td style="width: 25%;"><a href="torch_lgamma.html">torch_lgamma</a></td>
+<td>Lgamma</td></tr>
+<tr><td style="width: 25%;"><a href="torch_linspace.html">torch_linspace</a></td>
+<td>Linspace</td></tr>
+<tr><td style="width: 25%;"><a href="torch_load.html">torch_load</a></td>
+<td>Loads a saved object</td></tr>
+<tr><td style="width: 25%;"><a href="torch_log.html">torch_log</a></td>
+<td>Log</td></tr>
+<tr><td style="width: 25%;"><a href="torch_log10.html">torch_log10</a></td>
+<td>Log10</td></tr>
+<tr><td style="width: 25%;"><a href="torch_log1p.html">torch_log1p</a></td>
+<td>Log1p</td></tr>
+<tr><td style="width: 25%;"><a href="torch_log2.html">torch_log2</a></td>
+<td>Log2</td></tr>
+<tr><td style="width: 25%;"><a href="torch_logaddexp.html">torch_logaddexp</a></td>
+<td>Logaddexp</td></tr>
+<tr><td style="width: 25%;"><a href="torch_logaddexp2.html">torch_logaddexp2</a></td>
+<td>Logaddexp2</td></tr>
+<tr><td style="width: 25%;"><a href="torch_logcumsumexp.html">torch_logcumsumexp</a></td>
+<td>Logcumsumexp</td></tr>
+<tr><td style="width: 25%;"><a href="torch_logdet.html">torch_logdet</a></td>
+<td>Logdet</td></tr>
+<tr><td style="width: 25%;"><a href="torch_logical_and.html">torch_logical_and</a></td>
+<td>Logical_and</td></tr>
+<tr><td style="width: 25%;"><a href="torch_logical_not.html">torch_logical_not</a></td>
+<td>Logical_not</td></tr>
+<tr><td style="width: 25%;"><a href="torch_logical_or.html">torch_logical_or</a></td>
+<td>Logical_or</td></tr>
+<tr><td style="width: 25%;"><a href="torch_logical_xor.html">torch_logical_xor</a></td>
+<td>Logical_xor</td></tr>
+<tr><td style="width: 25%;"><a href="torch_logit.html">torch_logit</a></td>
+<td>Logit</td></tr>
+<tr><td style="width: 25%;"><a href="torch_logspace.html">torch_logspace</a></td>
+<td>Logspace</td></tr>
+<tr><td style="width: 25%;"><a href="torch_logsumexp.html">torch_logsumexp</a></td>
+<td>Logsumexp</td></tr>
+<tr><td style="width: 25%;"><a href="torch_dtype.html">torch_long</a></td>
+<td>Torch data types</td></tr>
+<tr><td style="width: 25%;"><a href="torch_lstsq.html">torch_lstsq</a></td>
+<td>Lstsq</td></tr>
+<tr><td style="width: 25%;"><a href="torch_lt.html">torch_lt</a></td>
+<td>Lt</td></tr>
+<tr><td style="width: 25%;"><a href="torch_lu.html">torch_lu</a></td>
+<td>LU</td></tr>
+<tr><td style="width: 25%;"><a href="torch_lu_solve.html">torch_lu_solve</a></td>
+<td>Lu_solve</td></tr>
+<tr><td style="width: 25%;"><a href="torch_manual_seed.html">torch_manual_seed</a></td>
+<td>Sets the seed for generating random numbers.</td></tr>
+<tr><td style="width: 25%;"><a href="torch_masked_select.html">torch_masked_select</a></td>
+<td>Masked_select</td></tr>
+<tr><td style="width: 25%;"><a href="torch_matmul.html">torch_matmul</a></td>
+<td>Matmul</td></tr>
+<tr><td style="width: 25%;"><a href="torch_matrix_exp.html">torch_matrix_exp</a></td>
+<td>Matrix_exp</td></tr>
+<tr><td style="width: 25%;"><a href="torch_matrix_power.html">torch_matrix_power</a></td>
+<td>Matrix_power</td></tr>
+<tr><td style="width: 25%;"><a href="torch_matrix_rank.html">torch_matrix_rank</a></td>
+<td>Matrix_rank</td></tr>
+<tr><td style="width: 25%;"><a href="torch_max.html">torch_max</a></td>
+<td>Max</td></tr>
+<tr><td style="width: 25%;"><a href="torch_maximum.html">torch_maximum</a></td>
+<td>Maximum</td></tr>
+<tr><td style="width: 25%;"><a href="torch_mean.html">torch_mean</a></td>
+<td>Mean</td></tr>
+<tr><td style="width: 25%;"><a href="torch_median.html">torch_median</a></td>
+<td>Median</td></tr>
+<tr><td style="width: 25%;"><a href="torch_memory_format.html">torch_memory_format</a></td>
+<td>Memory format</td></tr>
+<tr><td style="width: 25%;"><a href="torch_meshgrid.html">torch_meshgrid</a></td>
+<td>Meshgrid</td></tr>
+<tr><td style="width: 25%;"><a href="torch_min.html">torch_min</a></td>
+<td>Min</td></tr>
+<tr><td style="width: 25%;"><a href="torch_minimum.html">torch_minimum</a></td>
+<td>Minimum</td></tr>
+<tr><td style="width: 25%;"><a href="torch_mm.html">torch_mm</a></td>
+<td>Mm</td></tr>
+<tr><td style="width: 25%;"><a href="torch_mode.html">torch_mode</a></td>
+<td>Mode</td></tr>
+<tr><td style="width: 25%;"><a href="torch_movedim.html">torch_movedim</a></td>
+<td>Movedim</td></tr>
+<tr><td style="width: 25%;"><a href="torch_mul.html">torch_mul</a></td>
+<td>Mul</td></tr>
+<tr><td style="width: 25%;"><a href="torch_multinomial.html">torch_multinomial</a></td>
+<td>Multinomial</td></tr>
+<tr><td style="width: 25%;"><a href="torch_multiply.html">torch_multiply</a></td>
+<td>Multiply</td></tr>
+<tr><td style="width: 25%;"><a href="torch_mv.html">torch_mv</a></td>
+<td>Mv</td></tr>
+<tr><td style="width: 25%;"><a href="torch_mvlgamma.html">torch_mvlgamma</a></td>
+<td>Mvlgamma</td></tr>
+<tr><td style="width: 25%;"><a href="torch_nanquantile.html">torch_nanquantile</a></td>
+<td>Nanquantile</td></tr>
+<tr><td style="width: 25%;"><a href="torch_nansum.html">torch_nansum</a></td>
+<td>Nansum</td></tr>
+<tr><td style="width: 25%;"><a href="torch_narrow.html">torch_narrow</a></td>
+<td>Narrow</td></tr>
+<tr><td style="width: 25%;"><a href="torch_ne.html">torch_ne</a></td>
+<td>Ne</td></tr>
+<tr><td style="width: 25%;"><a href="torch_neg.html">torch_neg</a></td>
+<td>Neg</td></tr>
+<tr><td style="width: 25%;"><a href="torch_negative.html">torch_negative</a></td>
+<td>Negative</td></tr>
+<tr><td style="width: 25%;"><a href="torch_nextafter.html">torch_nextafter</a></td>
+<td>Nextafter</td></tr>
+<tr><td style="width: 25%;"><a href="torch_nonzero.html">torch_nonzero</a></td>
+<td>Nonzero</td></tr>
+<tr><td style="width: 25%;"><a href="torch_norm.html">torch_norm</a></td>
+<td>Norm</td></tr>
+<tr><td style="width: 25%;"><a href="torch_normal.html">torch_normal</a></td>
+<td>Normal</td></tr>
+<tr><td style="width: 25%;"><a href="torch_not_equal.html">torch_not_equal</a></td>
+<td>Not_equal</td></tr>
+<tr><td style="width: 25%;"><a href="torch_ones.html">torch_ones</a></td>
+<td>Ones</td></tr>
+<tr><td style="width: 25%;"><a href="torch_ones_like.html">torch_ones_like</a></td>
+<td>Ones_like</td></tr>
+<tr><td style="width: 25%;"><a href="torch_orgqr.html">torch_orgqr</a></td>
+<td>Orgqr</td></tr>
+<tr><td style="width: 25%;"><a href="torch_ormqr.html">torch_ormqr</a></td>
+<td>Ormqr</td></tr>
+<tr><td style="width: 25%;"><a href="torch_outer.html">torch_outer</a></td>
+<td>Outer</td></tr>
+<tr><td style="width: 25%;"><a href="torch_pdist.html">torch_pdist</a></td>
+<td>Pdist</td></tr>
+<tr><td style="width: 25%;"><a href="torch_qscheme.html">torch_per_channel_affine</a></td>
+<td>Creates the corresponding Scheme object</td></tr>
+<tr><td style="width: 25%;"><a href="torch_qscheme.html">torch_per_channel_symmetric</a></td>
+<td>Creates the corresponding Scheme object</td></tr>
+<tr><td style="width: 25%;"><a href="torch_qscheme.html">torch_per_tensor_affine</a></td>
+<td>Creates the corresponding Scheme object</td></tr>
+<tr><td style="width: 25%;"><a href="torch_qscheme.html">torch_per_tensor_symmetric</a></td>
+<td>Creates the corresponding Scheme object</td></tr>
+<tr><td style="width: 25%;"><a href="torch_pinverse.html">torch_pinverse</a></td>
+<td>Pinverse</td></tr>
+<tr><td style="width: 25%;"><a href="torch_pixel_shuffle.html">torch_pixel_shuffle</a></td>
+<td>Pixel_shuffle</td></tr>
+<tr><td style="width: 25%;"><a href="torch_poisson.html">torch_poisson</a></td>
+<td>Poisson</td></tr>
+<tr><td style="width: 25%;"><a href="torch_polar.html">torch_polar</a></td>
+<td>Polar</td></tr>
+<tr><td style="width: 25%;"><a href="torch_polygamma.html">torch_polygamma</a></td>
+<td>Polygamma</td></tr>
+<tr><td style="width: 25%;"><a href="torch_pow.html">torch_pow</a></td>
+<td>Pow</td></tr>
+<tr><td style="width: 25%;"><a href="torch_memory_format.html">torch_preserve_format</a></td>
+<td>Memory format</td></tr>
+<tr><td style="width: 25%;"><a href="torch_prod.html">torch_prod</a></td>
+<td>Prod</td></tr>
+<tr><td style="width: 25%;"><a href="torch_promote_types.html">torch_promote_types</a></td>
+<td>Promote_types</td></tr>
+<tr><td style="width: 25%;"><a href="torch_dtype.html">torch_qint32</a></td>
+<td>Torch data types</td></tr>
+<tr><td style="width: 25%;"><a href="torch_dtype.html">torch_qint8</a></td>
+<td>Torch data types</td></tr>
+<tr><td style="width: 25%;"><a href="torch_qr.html">torch_qr</a></td>
+<td>Qr</td></tr>
+<tr><td style="width: 25%;"><a href="torch_qscheme.html">torch_qscheme</a></td>
+<td>Creates the corresponding Scheme object</td></tr>
+<tr><td style="width: 25%;"><a href="torch_quantile.html">torch_quantile</a></td>
+<td>Quantile</td></tr>
+<tr><td style="width: 25%;"><a href="torch_quantize_per_channel.html">torch_quantize_per_channel</a></td>
+<td>Quantize_per_channel</td></tr>
+<tr><td style="width: 25%;"><a href="torch_quantize_per_tensor.html">torch_quantize_per_tensor</a></td>
+<td>Quantize_per_tensor</td></tr>
+<tr><td style="width: 25%;"><a href="torch_dtype.html">torch_quint8</a></td>
+<td>Torch data types</td></tr>
+<tr><td style="width: 25%;"><a href="torch_rad2deg.html">torch_rad2deg</a></td>
+<td>Rad2deg</td></tr>
+<tr><td style="width: 25%;"><a href="torch_rand.html">torch_rand</a></td>
+<td>Rand</td></tr>
+<tr><td style="width: 25%;"><a href="torch_randint.html">torch_randint</a></td>
+<td>Randint</td></tr>
+<tr><td style="width: 25%;"><a href="torch_randint_like.html">torch_randint_like</a></td>
+<td>Randint_like</td></tr>
+<tr><td style="width: 25%;"><a href="torch_randn.html">torch_randn</a></td>
+<td>Randn</td></tr>
+<tr><td style="width: 25%;"><a href="torch_randn_like.html">torch_randn_like</a></td>
+<td>Randn_like</td></tr>
+<tr><td style="width: 25%;"><a href="torch_randperm.html">torch_randperm</a></td>
+<td>Randperm</td></tr>
+<tr><td style="width: 25%;"><a href="torch_rand_like.html">torch_rand_like</a></td>
+<td>Rand_like</td></tr>
+<tr><td style="width: 25%;"><a href="torch_range.html">torch_range</a></td>
+<td>Range</td></tr>
+<tr><td style="width: 25%;"><a href="torch_real.html">torch_real</a></td>
+<td>Real</td></tr>
+<tr><td style="width: 25%;"><a href="torch_reciprocal.html">torch_reciprocal</a></td>
+<td>Reciprocal</td></tr>
+<tr><td style="width: 25%;"><a href="torch_reduction.html">torch_reduction</a></td>
+<td>Creates the reduction objet</td></tr>
+<tr><td style="width: 25%;"><a href="torch_reduction.html">torch_reduction_mean</a></td>
+<td>Creates the reduction objet</td></tr>
+<tr><td style="width: 25%;"><a href="torch_reduction.html">torch_reduction_none</a></td>
+<td>Creates the reduction objet</td></tr>
+<tr><td style="width: 25%;"><a href="torch_reduction.html">torch_reduction_sum</a></td>
+<td>Creates the reduction objet</td></tr>
+<tr><td style="width: 25%;"><a href="torch_relu.html">torch_relu</a></td>
+<td>Relu</td></tr>
+<tr><td style="width: 25%;"><a href="torch_relu_.html">torch_relu_</a></td>
+<td>Relu_</td></tr>
+<tr><td style="width: 25%;"><a href="torch_remainder.html">torch_remainder</a></td>
+<td>Remainder</td></tr>
+<tr><td style="width: 25%;"><a href="torch_renorm.html">torch_renorm</a></td>
+<td>Renorm</td></tr>
+<tr><td style="width: 25%;"><a href="torch_repeat_interleave.html">torch_repeat_interleave</a></td>
+<td>Repeat_interleave</td></tr>
+<tr><td style="width: 25%;"><a href="torch_reshape.html">torch_reshape</a></td>
+<td>Reshape</td></tr>
+<tr><td style="width: 25%;"><a href="torch_result_type.html">torch_result_type</a></td>
+<td>Result_type</td></tr>
+<tr><td style="width: 25%;"><a href="torch_roll.html">torch_roll</a></td>
+<td>Roll</td></tr>
+<tr><td style="width: 25%;"><a href="torch_rot90.html">torch_rot90</a></td>
+<td>Rot90</td></tr>
+<tr><td style="width: 25%;"><a href="torch_round.html">torch_round</a></td>
+<td>Round</td></tr>
+<tr><td style="width: 25%;"><a href="torch_rrelu_.html">torch_rrelu_</a></td>
+<td>Rrelu_</td></tr>
+<tr><td style="width: 25%;"><a href="torch_rsqrt.html">torch_rsqrt</a></td>
+<td>Rsqrt</td></tr>
+<tr><td style="width: 25%;"><a href="torch_save.html">torch_save</a></td>
+<td>Saves an object to a disk file.</td></tr>
+<tr><td style="width: 25%;"><a href="torch_scalar_tensor.html">torch_scalar_tensor</a></td>
+<td>Scalar tensor</td></tr>
+<tr><td style="width: 25%;"><a href="torch_searchsorted.html">torch_searchsorted</a></td>
+<td>Searchsorted</td></tr>
+<tr><td style="width: 25%;"><a href="torch_selu.html">torch_selu</a></td>
+<td>Selu</td></tr>
+<tr><td style="width: 25%;"><a href="torch_selu_.html">torch_selu_</a></td>
+<td>Selu_</td></tr>
+<tr><td style="width: 25%;"><a href="default_dtype.html">torch_set_default_dtype</a></td>
+<td>Gets and sets the default floating point dtype.</td></tr>
+<tr><td style="width: 25%;"><a href="threads.html">torch_set_num_interop_threads</a></td>
+<td>Number of threads</td></tr>
+<tr><td style="width: 25%;"><a href="threads.html">torch_set_num_threads</a></td>
+<td>Number of threads</td></tr>
+<tr><td style="width: 25%;"><a href="torch_sgn.html">torch_sgn</a></td>
+<td>Sgn</td></tr>
+<tr><td style="width: 25%;"><a href="torch_dtype.html">torch_short</a></td>
+<td>Torch data types</td></tr>
+<tr><td style="width: 25%;"><a href="torch_sigmoid.html">torch_sigmoid</a></td>
+<td>Sigmoid</td></tr>
+<tr><td style="width: 25%;"><a href="torch_sign.html">torch_sign</a></td>
+<td>Sign</td></tr>
+<tr><td style="width: 25%;"><a href="torch_signbit.html">torch_signbit</a></td>
+<td>Signbit</td></tr>
+<tr><td style="width: 25%;"><a href="torch_sin.html">torch_sin</a></td>
+<td>Sin</td></tr>
+<tr><td style="width: 25%;"><a href="torch_sinh.html">torch_sinh</a></td>
+<td>Sinh</td></tr>
+<tr><td style="width: 25%;"><a href="torch_slogdet.html">torch_slogdet</a></td>
+<td>Slogdet</td></tr>
+<tr><td style="width: 25%;"><a href="torch_solve.html">torch_solve</a></td>
+<td>Solve</td></tr>
+<tr><td style="width: 25%;"><a href="torch_sort.html">torch_sort</a></td>
+<td>Sort</td></tr>
+<tr><td style="width: 25%;"><a href="torch_layout.html">torch_sparse_coo</a></td>
+<td>Creates the corresponding layout</td></tr>
+<tr><td style="width: 25%;"><a href="torch_sparse_coo_tensor.html">torch_sparse_coo_tensor</a></td>
+<td>Sparse_coo_tensor</td></tr>
+<tr><td style="width: 25%;"><a href="torch_split.html">torch_split</a></td>
+<td>Split</td></tr>
+<tr><td style="width: 25%;"><a href="torch_sqrt.html">torch_sqrt</a></td>
+<td>Sqrt</td></tr>
+<tr><td style="width: 25%;"><a href="torch_square.html">torch_square</a></td>
+<td>Square</td></tr>
+<tr><td style="width: 25%;"><a href="torch_squeeze.html">torch_squeeze</a></td>
+<td>Squeeze</td></tr>
+<tr><td style="width: 25%;"><a href="torch_stack.html">torch_stack</a></td>
+<td>Stack</td></tr>
+<tr><td style="width: 25%;"><a href="torch_std.html">torch_std</a></td>
+<td>Std</td></tr>
+<tr><td style="width: 25%;"><a href="torch_std_mean.html">torch_std_mean</a></td>
+<td>Std_mean</td></tr>
+<tr><td style="width: 25%;"><a href="torch_stft.html">torch_stft</a></td>
+<td>Stft</td></tr>
+<tr><td style="width: 25%;"><a href="torch_layout.html">torch_strided</a></td>
+<td>Creates the corresponding layout</td></tr>
+<tr><td style="width: 25%;"><a href="torch_sub.html">torch_sub</a></td>
+<td>Sub</td></tr>
+<tr><td style="width: 25%;"><a href="torch_subtract.html">torch_subtract</a></td>
+<td>Subtract</td></tr>
+<tr><td style="width: 25%;"><a href="torch_sum.html">torch_sum</a></td>
+<td>Sum</td></tr>
+<tr><td style="width: 25%;"><a href="torch_svd.html">torch_svd</a></td>
+<td>Svd</td></tr>
+<tr><td style="width: 25%;"><a href="torch_symeig.html">torch_symeig</a></td>
+<td>Symeig</td></tr>
+<tr><td style="width: 25%;"><a href="torch_t.html">torch_t</a></td>
+<td>T</td></tr>
+<tr><td style="width: 25%;"><a href="torch_take.html">torch_take</a></td>
+<td>Take</td></tr>
+<tr><td style="width: 25%;"><a href="torch_tan.html">torch_tan</a></td>
+<td>Tan</td></tr>
+<tr><td style="width: 25%;"><a href="torch_tanh.html">torch_tanh</a></td>
+<td>Tanh</td></tr>
+<tr><td style="width: 25%;"><a href="torch_tensor.html">torch_tensor</a></td>
+<td>Converts R objects to a torch tensor</td></tr>
+<tr><td style="width: 25%;"><a href="torch_tensordot.html">torch_tensordot</a></td>
+<td>Tensordot</td></tr>
+<tr><td style="width: 25%;"><a href="torch_threshold_.html">torch_threshold_</a></td>
+<td>Threshold_</td></tr>
+<tr><td style="width: 25%;"><a href="torch_topk.html">torch_topk</a></td>
+<td>Topk</td></tr>
+<tr><td style="width: 25%;"><a href="torch_trace.html">torch_trace</a></td>
+<td>Trace</td></tr>
+<tr><td style="width: 25%;"><a href="torch_transpose.html">torch_transpose</a></td>
+<td>Transpose</td></tr>
+<tr><td style="width: 25%;"><a href="torch_trapz.html">torch_trapz</a></td>
+<td>Trapz</td></tr>
+<tr><td style="width: 25%;"><a href="torch_triangular_solve.html">torch_triangular_solve</a></td>
+<td>Triangular_solve</td></tr>
+<tr><td style="width: 25%;"><a href="torch_tril.html">torch_tril</a></td>
+<td>Tril</td></tr>
+<tr><td style="width: 25%;"><a href="torch_tril_indices.html">torch_tril_indices</a></td>
+<td>Tril_indices</td></tr>
+<tr><td style="width: 25%;"><a href="torch_triu.html">torch_triu</a></td>
+<td>Triu</td></tr>
+<tr><td style="width: 25%;"><a href="torch_triu_indices.html">torch_triu_indices</a></td>
+<td>Triu_indices</td></tr>
+<tr><td style="width: 25%;"><a href="torch_true_divide.html">torch_true_divide</a></td>
+<td>TRUE_divide</td></tr>
+<tr><td style="width: 25%;"><a href="torch_trunc.html">torch_trunc</a></td>
+<td>Trunc</td></tr>
+<tr><td style="width: 25%;"><a href="torch_dtype.html">torch_uint8</a></td>
+<td>Torch data types</td></tr>
+<tr><td style="width: 25%;"><a href="torch_unbind.html">torch_unbind</a></td>
+<td>Unbind</td></tr>
+<tr><td style="width: 25%;"><a href="torch_unique_consecutive.html">torch_unique_consecutive</a></td>
+<td>Unique_consecutive</td></tr>
+<tr><td style="width: 25%;"><a href="torch_unsafe_chunk.html">torch_unsafe_chunk</a></td>
+<td>Unsafe_chunk</td></tr>
+<tr><td style="width: 25%;"><a href="torch_unsafe_split.html">torch_unsafe_split</a></td>
+<td>Unsafe_split</td></tr>
+<tr><td style="width: 25%;"><a href="torch_unsqueeze.html">torch_unsqueeze</a></td>
+<td>Unsqueeze</td></tr>
+<tr><td style="width: 25%;"><a href="torch_vander.html">torch_vander</a></td>
+<td>Vander</td></tr>
+<tr><td style="width: 25%;"><a href="torch_var.html">torch_var</a></td>
+<td>Var</td></tr>
+<tr><td style="width: 25%;"><a href="torch_var_mean.html">torch_var_mean</a></td>
+<td>Var_mean</td></tr>
+<tr><td style="width: 25%;"><a href="torch_vdot.html">torch_vdot</a></td>
+<td>Vdot</td></tr>
+<tr><td style="width: 25%;"><a href="torch_view_as_complex.html">torch_view_as_complex</a></td>
+<td>View_as_complex</td></tr>
+<tr><td style="width: 25%;"><a href="torch_view_as_real.html">torch_view_as_real</a></td>
+<td>View_as_real</td></tr>
+<tr><td style="width: 25%;"><a href="torch_vstack.html">torch_vstack</a></td>
+<td>Vstack</td></tr>
+<tr><td style="width: 25%;"><a href="torch_where.html">torch_where</a></td>
+<td>Where</td></tr>
+<tr><td style="width: 25%;"><a href="torch_zeros.html">torch_zeros</a></td>
+<td>Zeros</td></tr>
+<tr><td style="width: 25%;"><a href="torch_zeros_like.html">torch_zeros_like</a></td>
+<td>Zeros_like</td></tr>
+</table>
+
+<h2><a name="W">-- W --</a></h2>
+
+<table width="100%">
+<tr><td style="width: 25%;"><a href="with_detect_anomaly.html">with_detect_anomaly</a></td>
+<td>Context-manager that enable anomaly detection for the autograd engine.</td></tr>
+<tr><td style="width: 25%;"><a href="with_enable_grad.html">with_enable_grad</a></td>
+<td>Enable grad</td></tr>
+<tr><td style="width: 25%;"><a href="with_no_grad.html">with_no_grad</a></td>
+<td>Temporarily modify gradient recording.</td></tr>
+</table>
+</body></html>

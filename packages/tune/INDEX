@@ -1,0 +1,27 @@
+augment.tune_results    Augment data with holdout predictions
+autoplot.tune_results   Plot tuning search results
+collect_predictions     Obtain and format results produced by tuning
+                        functions
+conf_mat_resampled      Compute average confusion matrix across
+                        resamples
+control_bayes           Control aspects of the Bayesian search process
+control_grid            Control aspects of the grid search process
+coord_obs_pred          Use same scale for plots of observed vs
+                        predicted values
+example_ames_knn        Example Analysis of Ames Housing Data
+expo_decay              Exponential decay function
+extract-tune            Extract elements of 'tune' objects
+extract_model           Convenience functions to extract model
+filter_parameters       Remove some tuning parameter results
+finalize_model          Splice final parameters into objects
+fit_resamples           Fit multiple models via resampling
+last_fit                Fit the final best model to the training set
+                        and evaluate the test set
+message_wrap            Write a message that respects the line width
+prob_improve            Acquisition function for scoring parameter
+                        combinations
+show_best               Investigate best tuning parameters
+tune                    A placeholder function for argument values that
+                        are to be tuned.
+tune_bayes              Bayesian optimization of model parameters.
+tune_grid               Model tuning via grid search

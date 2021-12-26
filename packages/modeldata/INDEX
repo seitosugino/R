@@ -1,0 +1,38 @@
+Chicago                 Chicago ridership data
+Sacramento              Sacramento CA home prices
+Smithsonian             Smithsonian museums
+ad_data                 Alzheimer's disease data
+ames                    Ames Housing Data
+attrition               Job attrition
+biomass                 Biomass data
+bivariate               Example bivariate classification data
+car_prices              Kelly Blue Book resale data for 2005 model year
+                        GM cars
+cells                   Cell body segmentation
+check_times             Execution time data
+concrete                Compressive strength of concrete mixtures
+covers                  Raw cover type data
+credit_data             Credit data
+crickets                Rates of Cricket Chirps
+drinks                  Sample time series data
+grants                  Grant acceptance data
+hpc_cv                  Class probability predictions
+hpc_data                High-performance computing system data
+lending_club            Loan data
+meats                   Fat, water and protein content of meat samples
+mlc_churn               Customer churn data
+oils                    Fatty acid composition of commercial oils
+okc                     OkCupid data
+parabolic               Parabolic class boundary data
+pathology               Liver pathology data
+pd_speech               Parkinson's disease speech classification data
+                        set
+penguins                Palmer Station penguin data
+scat                    Morphometric data on scat
+small_fine_foods        Fine foods example data
+solubility_test         Solubility predictions from MARS model
+stackoverflow           Annual Stack Overflow Developer Survey Data
+tate_text               Tate Gallery modern artwork metadata
+two_class_dat           Two class data
+two_class_example       Two class predictions
+wa_churn                Watson churn data

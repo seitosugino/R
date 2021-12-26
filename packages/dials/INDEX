@@ -1,0 +1,77 @@
+Chicago                 Chicago Ridership Data
+Laplace                 Laplace correction parameter
+activation              Activation functions between network layers
+adjust_deg_free         Parameters to adjust effective degrees of
+                        freedom
+all_neighbors           Parameter to determine which neighbors to use
+conditional_min_criterion
+                        Parameters for possible engine parameters for
+                        party models
+confidence_factor       Parameters for possible engine parameters for
+                        C5.0
+cost                    Support vector machine parameters
+deg_free                Degrees of freedom (integer)
+degree                  Parameters for exponents
+dist_power              Minkowski distance parameter
+dropout                 Neural network parameters
+extrapolation           Parameters for possible engine parameters for
+                        Cubist
+finalize                Functions to finalize data-specific parameter
+                        ranges
+freq_cut                Near-zero variance parameters
+grid_max_entropy        Space-filling parameter grids
+grid_regular            Create grids of tuning parameters
+learn_rate              Learning rate
+max_nodes               Parameters for possible engine parameters for
+                        randomForest
+max_num_terms           Parameters for possible engine parameters for
+                        earth models
+max_times               Word frequencies for removal
+max_tokens              Maximum number of retained tokens
+min_dist                Parameter for the effective minimum distance
+                        between embedded points
+min_unique              Number of unique values for pre-processing
+mixture                 Mixture of penalization terms
+momentum                Gradient descent momentum parameter
+mtry                    Number of randomly sampled predictors
+neighbors               Number of neighbors
+new-param               Tools for creating new parameter objects
+num_breaks              Number of cut-points for binning
+num_comp                Number of new features
+num_hash                Text hashing parameters
+num_tokens              Parameter to determine number of tokens in
+                        ngram
+over_ratio              Parameters for class-imbalance sampling
+parameters              Information on tuning parameters within an
+                        object
+penalty                 Amount of regularization/penalization
+predictor_prop          Proportion of predictors
+prior_slab_dispersion   Bayesian PCA parameters
+prune_method            MARS pruning methods
+pull_dials_object       Return a dials parameter object associated with
+                        parameters
+range_validate          Tools for working with parameter ranges
+rbf_sigma               Kernel parameters
+regularization_factor   Parameters for possible engine parameters for
+                        ranger
+regularization_method   Estimation methods for regularized models
+scale_pos_weight        Parameters for possible engine parameters for
+                        xgboost
+select_features         Parameter to enable feature selection
+shrinkage_correlation   Parameters for possible engine parameters for
+                        sda models
+smoothness              Kernel Smoothness
+stop_iter               Early stopping parameter
+surv_dist               Parametric distributions for censored data
+threshold               General thresholding parameter
+token                   Token types
+trees                   Parameter functions related to tree- and
+                        rule-based models.
+unknown                 Placeholder for unknown parameter values
+update.parameters       Update a single parameter in a parameter set
+value_validate          Tools for working with parameter values
+weight                  Parameter for '"double normalization"' when
+                        creating token counts
+weight_func             Kernel functions for distance weighting
+weight_scheme           Term frequency weighting methods
+window_size             Parameter for the moving window size

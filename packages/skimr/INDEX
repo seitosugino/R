@@ -1,0 +1,25 @@
+deprecated-v1           Deprecated functions from skimr v1
+fix_windows_histograms
+                        Fix unicode histograms on Windows
+focus                   Only show a subset of summary statistics after
+                        skimming
+get_default_skimmers    View default skimmer names and functions
+get_skimmers            Retrieve the summary functions for a specific
+                        data type
+knit_print              Provide a default printing method for knitr.
+mutate.skim_df          Mutate a skim_df
+partition               Separate a big 'skim_df' into smaller data
+                        frames, by type.
+print                   Print 'skim' objects
+repr                    Skimr printing within Jupyter notebooks
+sfl                     Create a skimr function list
+skim                    Skim a data frame, getting useful summary
+                        statistics
+skim-attr               Functions for accessing skim_df attributes
+skim-obj                Test if an object is compatible with 'skimr'
+skim_with               Set or add the summary functions for a
+                        particular type of data
+skimr-package           Skim a data frame
+stats                   Summary statistic functions
+summary.skim_df         Summary function for skim_df
+to_long                 Create "long" skim output
