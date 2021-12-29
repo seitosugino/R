@@ -14,6 +14,8 @@ library(GGally)
 library(withr)
 library(tabnet)
 library(modeldata)
+library(patchwork)
+
 
 # なぜか.RprofileからDALEXtraを読み込もうとするとエラーが発生．．．
 #library(DALEXtra)
