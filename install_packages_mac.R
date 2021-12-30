@@ -28,4 +28,4 @@ devtools::install_version("skimr", version = "2.1.3", repos = "https://cran.ism.
 devtools::install_version("GGally", version = "2.1.2", repos = "https://cran.ism.ac.jp", quiet = TRUE, upgrade = FALSE)
 devtools::install_version("DALEX", version = "2.2.1", repos = "https://cran.ism.ac.jp", quiet = TRUE, upgrade = FALSE)
 devtools::install_version("DALEXtra", version = "2.1.1", repos = "https://cran.ism.ac.jp", quiet = TRUE, upgrade = FALSE)
-
+install.packages("nycflights13")
