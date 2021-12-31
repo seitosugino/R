@@ -15,6 +15,7 @@ library(withr)
 library(tabnet)
 library(modeldata)
 library(patchwork)
+library(lubridate)
 
 # なぜか.RprofileからDALEXtraを読み込もうとするとエラーが発生．．．
 #library(DALEXtra)
